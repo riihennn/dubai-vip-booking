@@ -15,6 +15,7 @@ import { FloatingWhatsApp, Footer, Header } from "@/components/site";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { ThemeProvider } from "../lib/theme";
 
 function NotFoundComponent() {
   return (
@@ -92,7 +93,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" },
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
     ],
   }),
   shellComponent: RootShell,
@@ -105,6 +105,26 @@ function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var t = localStorage.getItem('dubai-vip-theme');
+                  if (t === 'light') {
+                    document.documentElement.classList.add('light');
+                    document.documentElement.classList.remove('dark');
+                    document.documentElement.setAttribute('data-theme', 'light');
+                  } else {
+                    document.documentElement.classList.add('dark');
+                    document.documentElement.classList.remove('light');
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                  }
+                } catch (e) {}
+              })();
+            `,
+          }}
+        />
         <HeadContent />
       </head>
       <body>
@@ -120,15 +140,17 @@ function RootComponent() {
   const path = useRouterState({ select: (s) => s.location.pathname });
 
   return (
-    <QueryClientProvider client={queryClient}>
-      <Header />
+    <ThemeProvider>
+      <QueryClientProvider client={queryClient}>
+        <Header />
 
         <motion.main key={path} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
           <Outlet />
         </motion.main>
 
-      <Footer />
-      <FloatingWhatsApp />
-    </QueryClientProvider>
+        <Footer />
+        <FloatingWhatsApp />
+      </QueryClientProvider>
+    </ThemeProvider>
   );
 }

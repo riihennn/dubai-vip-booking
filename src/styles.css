@@ -64,6 +64,38 @@
   --shadow-glow: 0 20px 60px -20px oklch(0.82 0.12 80 / 45%);
 }
 
+html.light,
+:root.light,
+[data-theme="light"] {
+  --radius: 0.25rem;
+  /* Exact thenightcircle.com color tokens */
+  --background: #ebecef;
+  --foreground: #0a0a0a;
+  --ink: #ffffff;
+  --card: #ffffff;
+  --card-foreground: #0a0a0a;
+  --popover: #ffffff;
+  --popover-foreground: #0a0a0a;
+  --primary: #b1ef42;
+  --primary-foreground: #0a0a0a;
+  --secondary: #f2f3f5;
+  --secondary-foreground: #0a0a0a;
+  --muted: #e6e7e9;
+  --muted-foreground: #60646c;
+  --accent: #b1ef42;
+  --accent-foreground: #0a0a0a;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: rgba(14, 14, 16, 0.08);
+  --input: rgba(14, 14, 16, 0.12);
+  --ring: #b1ef42;
+  --whatsapp: #0a0a0a;
+  --whatsapp-foreground: #ffffff;
+  --gradient-gold: linear-gradient(120deg, #487c04 0%, #72c10c 50%, #3e6d03 100%);
+  --gradient-fade: linear-gradient(to top, var(--background) 0%, rgba(235, 236, 239, 0.95) 45%, rgba(235, 236, 239, 0.25) 100%);
+  --shadow-glow: 0 14px 40px -10px rgba(177, 239, 66, 0.45);
+}
+
 @layer base {
   * { border-color: var(--color-border); }
   html { scroll-behavior: smooth; }
@@ -72,6 +104,7 @@
     color: var(--color-foreground);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
+    transition: background-color 0.25s ease, color 0.25s ease;
   }
   h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.03em; }
   ::selection { background: var(--primary); color: var(--primary-foreground); }
@@ -90,7 +123,7 @@
   font-size: 0.7rem;
   letter-spacing: 0.35em;
   text-transform: uppercase;
-  color: var(--primary);
+  color: var(--eyebrow, var(--primary));
 }
 @utility display-xl {
   font-family: var(--font-display);
@@ -122,3 +155,25 @@
   animation: marquee 40s linear infinite;
 }
 @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* Light mode specific enhancements matching thenightcircle */
+html.light .grain::after {
+  opacity: 0.03;
+  mix-blend-mode: multiply;
+}
+
+html.light .text-primary {
+  color: #487c04;
+}
+
+html.light .bg-primary {
+  background-color: #b1ef42;
+}
+
+html.light .border-primary {
+  border-color: #b1ef42;
+}
+
+html.light .eyebrow {
+  color: #60646c;
+}

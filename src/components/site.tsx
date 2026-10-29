@@ -4,6 +4,7 @@ import { ArrowUpRight, Menu, MessageCircle, X } from "lucide-react";
 import { useEffect, useState, type ReactNode } from "react";
 import { cn } from "@/lib/utils";
 import { waLink, type Venue } from "@/lib/venues";
+import { ThemeToggle } from "./theme-toggle";
 
 const nav = [
   { to: "/dubai", label: "Dubai" },
@@ -79,7 +80,9 @@ export function Header() {
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-500",
-        scrolled ? "border-b border-border bg-background/80 backdrop-blur-xl" : "bg-transparent",
+        scrolled
+          ? "border-b border-border bg-background/85 backdrop-blur-xl shadow-xs"
+          : "bg-transparent [html.light_&]:bg-background/80 [html.light_&]:backdrop-blur-xl [html.light_&]:border-b [html.light_&]:border-border/60",
       )}
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 md:h-20 md:px-8">
@@ -90,19 +93,27 @@ export function Header() {
               key={n.to}
               to={n.to}
               className="text-sm text-foreground/70 transition-colors hover:text-foreground"
-              activeProps={{ className: "text-primary" }}
+              activeProps={{ className: "text-primary font-semibold" }}
             >
               {n.label}
             </Link>
           ))}
         </nav>
         <div className="flex items-center gap-3">
+          <ThemeToggle className="hidden sm:flex" />
           <WhatsAppButton size="sm" className="hidden sm:inline-flex">
             Book
           </WhatsAppButton>
-          <button aria-label="Menu" onClick={() => setOpen((o) => !o)} className="lg:hidden">
-            {open ? <X /> : <Menu />}
-          </button>
+          <div className="flex items-center gap-2 lg:hidden">
+            <ThemeToggle compact />
+            <button
+              aria-label="Menu"
+              onClick={() => setOpen((o) => !o)}
+              className="grid size-9 place-items-center rounded-full border border-border bg-card/60"
+            >
+              {open ? <X className="size-5" /> : <Menu className="size-5" />}
+            </button>
+          </div>
         </div>
       </div>
       <AnimatePresence>
@@ -120,7 +131,11 @@ export function Header() {
                 </Link>
               </motion.div>
             ))}
-            <WhatsAppButton size="lg" className="mt-8 w-full" />
+            <div className="mt-8 flex items-center justify-between border-t border-border pt-6">
+              <span className="text-sm font-semibold text-muted-foreground">Theme</span>
+              <ThemeToggle />
+            </div>
+            <WhatsAppButton size="lg" className="mt-6 w-full" />
           </motion.div>
         )}
       </AnimatePresence>
@@ -244,7 +259,10 @@ export function VenueCard({ venue, index = 0, tall = false }: { venue: Venue; in
       <Link
         to="/venues/$slug"
         params={{ slug: venue.slug }}
-        className={cn("group relative block overflow-hidden rounded-sm bg-card", tall ? "aspect-[3/4.4]" : "aspect-[4/5]")}
+        className={cn(
+          "group relative block overflow-hidden rounded-sm bg-card border border-border transition-all duration-300 hover:shadow-lg [html.light_&]:shadow-sm",
+          tall ? "aspect-[3/4.4]" : "aspect-[4/5]"
+        )}
       >
         <img
           src={venue.image}
@@ -252,25 +270,25 @@ export function VenueCard({ venue, index = 0, tall = false }: { venue: Venue; in
           loading="lazy"
           className="absolute inset-0 size-full object-cover transition-all duration-[1.2s] ease-out group-hover:scale-110 group-hover:brightness-110"
         />
-        <div className="absolute inset-0 bg-fade opacity-90 transition-opacity duration-500 group-hover:opacity-100" />
+        <div className="absolute inset-0 bg-gradient-to-t from-card via-card/80 to-transparent opacity-90 transition-opacity duration-500 group-hover:opacity-100" />
         <div className="absolute left-4 top-4 flex gap-2">
-          <span className="rounded-full border border-foreground/20 bg-background/40 px-3 py-1 text-[10px] uppercase tracking-[0.25em] backdrop-blur">
+          <span className="rounded-full border border-foreground/20 bg-background/50 px-3 py-1 text-[10px] uppercase tracking-[0.25em] backdrop-blur font-semibold">
             {venue.type}
           </span>
-          <span className="rounded-full bg-primary/90 px-2 py-1 text-[9px] font-bold uppercase tracking-widest text-primary-foreground">Demo</span>
+          <span className="rounded-full bg-primary px-2 py-1 text-[9px] font-bold uppercase tracking-widest text-primary-foreground shadow-xs">Demo</span>
         </div>
         <div className="absolute right-4 top-4 grid size-10 place-items-center rounded-full bg-primary text-primary-foreground opacity-0 transition-all duration-500 group-hover:rotate-45 group-hover:opacity-100">
           <ArrowUpRight className="size-5" />
         </div>
         <div className="absolute inset-x-0 bottom-0 p-5 md:p-6">
           <p className="eyebrow">{venue.area}</p>
-          <h3 className="mt-2 text-3xl font-bold md:text-4xl">{venue.name}</h3>
-          <p className="mt-1 text-sm text-foreground/70">{venue.tagline}</p>
+          <h3 className="mt-2 text-3xl font-bold md:text-4xl text-card-foreground">{venue.name}</h3>
+          <p className="mt-1 text-sm text-card-foreground/75">{venue.tagline}</p>
           <div className="grid grid-rows-[0fr] transition-all duration-500 group-hover:grid-rows-[1fr]">
             <div className="overflow-hidden">
-              <div className="mt-4 flex items-center justify-between border-t border-border pt-4 text-xs text-foreground/70">
+              <div className="mt-4 flex items-center justify-between border-t border-border pt-4 text-xs text-card-foreground/75">
                 <span>{venue.nights.join(" · ")} · {venue.capacity}</span>
-                <span className="text-primary">From {venue.minSpend}</span>
+                <span className="text-primary font-semibold">From {venue.minSpend}</span>
               </div>
             </div>
           </div>
@@ -279,6 +297,8 @@ export function VenueCard({ venue, index = 0, tall = false }: { venue: Venue; in
     </Reveal>
   );
 }
+
+export { ThemeToggle };
 
 export function Marquee({ items }: { items: string[] }) {
   const row = [...items, ...items];
