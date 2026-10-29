@@ -4,6 +4,7 @@ import { Plus } from "lucide-react";
 import { useState } from "react";
 import { CtaBand, PageHero, Section, meta } from "@/components/site";
 import { cn } from "@/lib/utils";
+import { images } from "@/lib/venues";
 
 export const Route = createFileRoute("/faq")({
   head: () => meta("FAQ — Dubai VIP Booking Dubai Nightlife Concierge", "Answers on minimum spends, dress codes, guestlists, age limits and booking VIP tables in Dubai and Abu Dhabi."),
@@ -23,7 +24,7 @@ function Faq() {
   const [open, setOpen] = useState<number | null>(0);
   return (
     <>
-      <PageHero eyebrow="Good to know" title={<>Questions, <span className="text-gold">answered.</span></>} />
+      <PageHero eyebrow="Good to know" title={<>Questions, <span className="text-gold">answered.</span></>} image={images.beach} />
       <Section className="pt-0 md:pt-0">
         <div className="mx-auto max-w-3xl divide-y divide-border border-y border-border">
           {faqs.map(([q, a], i) => (

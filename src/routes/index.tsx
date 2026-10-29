@@ -17,23 +17,23 @@ function Home() {
   const o = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
   return (
     <>
-      <section ref={ref} className="grain relative flex min-h-[100svh] items-end overflow-hidden pb-14 pt-28">
+      <section ref={ref} className="grain relative flex min-h-[100svh] items-end overflow-hidden pb-14 pt-28 text-white">
         <motion.img src={images.hero} alt="Dubai nightclub" style={{ y }} initial={{ scale: 1.2 }} animate={{ scale: 1 }} transition={{ duration: 2.2, ease: [0.22, 1, 0.36, 1] }} className="absolute inset-0 size-full object-cover" width={1920} height={1088} />
         <div className="absolute inset-0 bg-fade" />
         <motion.div style={{ opacity: o }} className="relative mx-auto w-full max-w-7xl px-5 md:px-8">
-          <motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="eyebrow">Dubai · Abu Dhabi · After dark</motion.p>
+          <motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="eyebrow text-primary">Dubai · Abu Dhabi · After dark</motion.p>
           <h1 className="display-xl mt-5">
             {["Your Night.", "Your City."].map((w, i) => (
               <span key={w} className="block overflow-hidden pb-[0.1em]">
-                <motion.span initial={{ y: "110%" }} animate={{ y: 0 }} transition={{ duration: 1.1, delay: 0.2 + i * 0.12, ease: [0.22, 1, 0.36, 1] }} className={i === 1 ? "block text-gold" : "block"}>{w}</motion.span>
+                <motion.span initial={{ y: "110%" }} animate={{ y: 0 }} transition={{ duration: 1.1, delay: 0.2 + i * 0.12, ease: [0.22, 1, 0.36, 1] }} className={i === 1 ? "block text-gold" : "block text-white"}>{w}</motion.span>
               </span>
             ))}
           </h1>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.9 }} className="mt-8 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
-            <p className="max-w-md text-lg text-foreground/75">Discover premium nightlife venues, VIP table experiences, and guestlist access across Dubai and Abu Dhabi.</p>
+            <p className="max-w-md text-lg text-white/80">Discover premium nightlife venues, VIP table experiences, and guestlist access across Dubai and Abu Dhabi.</p>
             <div className="flex flex-wrap gap-3">
               <WhatsAppButton size="lg">Book a table</WhatsAppButton>
-              <GhostLink to="/guestlist">Join guestlist</GhostLink>
+              <GhostLink to="/guestlist" className="border-white/30 text-white hover:border-primary hover:text-primary">Join guestlist</GhostLink>
             </div>
           </motion.div>
         </motion.div>
@@ -50,15 +50,15 @@ function Home() {
             { to: "/abu-dhabi", name: "Abu Dhabi", img: images.abudhabi, n: venues.filter((v) => v.city === "abu-dhabi").length },
           ].map((c, i) => (
             <Reveal key={c.to} delay={i * 0.1}>
-              <Link to={c.to} className="group relative block aspect-[4/3] overflow-hidden rounded-sm md:aspect-[5/6]">
+              <Link to={c.to} className="group relative block aspect-[4/3] overflow-hidden rounded-sm border border-border shadow-sm transition-all duration-300 hover:shadow-xl md:aspect-[5/6]">
                 <img src={c.img} alt={c.name} loading="lazy" className="absolute inset-0 size-full object-cover transition-transform duration-[1.4s] group-hover:scale-110" />
-                <div className="absolute inset-0 bg-fade" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 flex items-end justify-between p-6 md:p-10">
                   <div>
-                    <p className="eyebrow">{c.n} curated venues</p>
-                    <h3 className="mt-2 font-display text-5xl font-extrabold md:text-7xl">{c.name}</h3>
+                    <p className="eyebrow text-primary">{c.n} curated venues</p>
+                    <h3 className="mt-2 font-display text-5xl font-extrabold text-white md:text-7xl">{c.name}</h3>
                   </div>
-                  <span className="grid size-14 place-items-center rounded-full border border-foreground/30 transition-all duration-500 group-hover:rotate-45 group-hover:border-primary group-hover:bg-primary group-hover:text-primary-foreground"><ArrowUpRight /></span>
+                  <span className="grid size-14 place-items-center rounded-full border border-white/40 text-white transition-all duration-500 group-hover:rotate-45 group-hover:border-primary group-hover:bg-primary group-hover:text-black"><ArrowUpRight /></span>
                 </div>
               </Link>
             </Reveal>

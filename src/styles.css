@@ -1,5 +1,4 @@
-@import "tailwindcss" source(none);
-@source "../src";
+@import "tailwindcss";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
@@ -92,7 +91,7 @@ html.light,
   --whatsapp: #0a0a0a;
   --whatsapp-foreground: #ffffff;
   --gradient-gold: linear-gradient(120deg, #487c04 0%, #72c10c 50%, #3e6d03 100%);
-  --gradient-fade: linear-gradient(to top, var(--background) 0%, rgba(235, 236, 239, 0.95) 45%, rgba(235, 236, 239, 0.25) 100%);
+  --gradient-fade: linear-gradient(to top, rgba(10, 10, 12, 0.9) 0%, rgba(10, 10, 12, 0.45) 45%, transparent 100%);
   --shadow-glow: 0 14px 40px -10px rgba(177, 239, 66, 0.45);
 }
 

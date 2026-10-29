@@ -6,11 +6,14 @@ import { cn } from "@/lib/utils";
 import { waLink, type Venue } from "@/lib/venues";
 import { ThemeToggle } from "./theme-toggle";
 
-const nav = [
+const mainNav = [
   { to: "/dubai", label: "Dubai" },
   { to: "/abu-dhabi", label: "Abu Dhabi" },
   { to: "/venues", label: "Venues" },
   { to: "/guestlist", label: "Guestlist" },
+] as const;
+
+const footerNav = [
   { to: "/how-it-works", label: "How it works" },
   { to: "/partner", label: "Partner" },
   { to: "/faq", label: "FAQ" },
@@ -53,11 +56,14 @@ export function WhatsAppButton({
   );
 }
 
-export function GhostLink({ to, children }: { to: string; children: ReactNode }) {
+export function GhostLink({ to, children, className }: { to: string; children: ReactNode; className?: string }) {
   return (
     <Link
       to={to}
-      className="group inline-flex items-center gap-2 rounded-full border border-foreground/25 px-6 py-3 text-sm font-semibold transition-colors hover:border-primary hover:text-primary"
+      className={cn(
+        "group inline-flex items-center gap-2 rounded-full border border-foreground/25 px-6 py-3 text-sm font-semibold transition-colors hover:border-primary hover:text-primary",
+        className
+      )}
     >
       {children}
       <ArrowUpRight className="size-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
@@ -81,18 +87,23 @@ export function Header() {
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-500",
         scrolled
-          ? "border-b border-border bg-background/85 backdrop-blur-xl shadow-xs"
-          : "bg-transparent [html.light_&]:bg-background/80 [html.light_&]:backdrop-blur-xl [html.light_&]:border-b [html.light_&]:border-border/60",
+          ? "border-b border-border bg-background/85 backdrop-blur-xl shadow-xs text-foreground"
+          : "bg-transparent text-white",
       )}
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 md:h-20 md:px-8">
         <Logo />
-        <nav className="hidden items-center gap-7 lg:flex">
-          {nav.map((n) => (
+        <nav className="hidden items-center gap-8 lg:flex">
+          {mainNav.map((n) => (
             <Link
               key={n.to}
               to={n.to}
-              className="text-sm text-foreground/70 transition-colors hover:text-foreground"
+              className={cn(
+                "text-sm font-medium transition-colors",
+                scrolled
+                  ? "text-foreground/75 hover:text-foreground"
+                  : "text-white/85 hover:text-white"
+              )}
               activeProps={{ className: "text-primary font-semibold" }}
             >
               {n.label}
@@ -109,7 +120,12 @@ export function Header() {
             <button
               aria-label="Menu"
               onClick={() => setOpen((o) => !o)}
-              className="grid size-9 place-items-center rounded-full border border-border bg-card/60"
+              className={cn(
+                "grid size-9 place-items-center rounded-full border transition-colors",
+                scrolled
+                  ? "border-border bg-card/60 text-foreground"
+                  : "border-white/30 bg-black/40 text-white"
+              )}
             >
               {open ? <X className="size-5" /> : <Menu className="size-5" />}
             </button>
@@ -124,13 +140,25 @@ export function Header() {
             exit={{ opacity: 0, y: -12 }}
             className="h-[calc(100dvh-4rem)] overflow-y-auto border-t border-border bg-background px-5 py-8 lg:hidden"
           >
-            {nav.map((n, i) => (
-              <motion.div key={n.to} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.04 }}>
-                <Link to={n.to} className="block py-3 font-display text-4xl font-bold" activeProps={{ className: "text-primary" }}>
-                  {n.label}
-                </Link>
-              </motion.div>
-            ))}
+            <div className="space-y-1">
+              {mainNav.map((n, i) => (
+                <motion.div key={n.to} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.04 }}>
+                  <Link to={n.to} className="block py-3 font-display text-4xl font-bold" activeProps={{ className: "text-primary" }}>
+                    {n.label}
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+            <div className="my-6 border-t border-border pt-6">
+              <p className="eyebrow mb-3 text-muted-foreground">Information</p>
+              <div className="grid grid-cols-2 gap-3">
+                {footerNav.map((n) => (
+                  <Link key={n.to} to={n.to} className="py-2 text-base text-foreground/75 hover:text-primary" activeProps={{ className: "text-primary font-semibold" }}>
+                    {n.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
             <div className="mt-8 flex items-center justify-between border-t border-border pt-6">
               <span className="text-sm font-semibold text-muted-foreground">Theme</span>
               <ThemeToggle />
@@ -219,7 +247,7 @@ export function Reveal({ children, className, delay = 0 }: { children: ReactNode
 
 export function PageHero({ eyebrow, title, sub, image }: { eyebrow: string; title: ReactNode; sub?: string; image?: string }) {
   return (
-    <section className="grain relative flex min-h-[70vh] items-end overflow-hidden pb-16 pt-32">
+    <section className={cn("grain relative flex min-h-[70vh] items-end overflow-hidden pb-16 pt-32", image && "text-white")}>
       {image && (
         <motion.img
           src={image}
@@ -230,21 +258,21 @@ export function PageHero({ eyebrow, title, sub, image }: { eyebrow: string; titl
           className="absolute inset-0 size-full object-cover"
         />
       )}
-      <div className="absolute inset-0 bg-fade" />
+      {image && <div className="absolute inset-0 bg-fade" />}
       <div className="relative mx-auto w-full max-w-7xl px-5 md:px-8">
-        <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }} className="eyebrow">
+        <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }} className="eyebrow text-primary">
           {eyebrow}
         </motion.p>
         <motion.h1
           initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-          className="display-xl mt-4"
+          className={cn("display-xl mt-4", image ? "text-white" : "text-foreground")}
         >
           {title}
         </motion.h1>
         {sub && (
-          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }} className="mt-6 max-w-xl text-lg text-foreground/75">
+          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }} className={cn("mt-6 max-w-xl text-lg", image ? "text-white/80" : "text-foreground/75")}>
             {sub}
           </motion.p>
         )}
@@ -260,7 +288,7 @@ export function VenueCard({ venue, index = 0, tall = false }: { venue: Venue; in
         to="/venues/$slug"
         params={{ slug: venue.slug }}
         className={cn(
-          "group relative block overflow-hidden rounded-sm bg-card border border-border transition-all duration-300 hover:shadow-lg [html.light_&]:shadow-sm",
+          "group relative block overflow-hidden rounded-sm bg-card border border-border transition-all duration-300 hover:shadow-xl [html.light_&]:shadow-sm",
           tall ? "aspect-[3/4.4]" : "aspect-[4/5]"
         )}
       >
@@ -270,9 +298,9 @@ export function VenueCard({ venue, index = 0, tall = false }: { venue: Venue; in
           loading="lazy"
           className="absolute inset-0 size-full object-cover transition-all duration-[1.2s] ease-out group-hover:scale-110 group-hover:brightness-110"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-card via-card/80 to-transparent opacity-90 transition-opacity duration-500 group-hover:opacity-100" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-transparent opacity-90 transition-opacity duration-500 group-hover:opacity-100" />
         <div className="absolute left-4 top-4 flex gap-2">
-          <span className="rounded-full border border-foreground/20 bg-background/50 px-3 py-1 text-[10px] uppercase tracking-[0.25em] backdrop-blur font-semibold">
+          <span className="rounded-full border border-white/20 bg-black/60 px-3 py-1 text-[10px] uppercase tracking-[0.25em] text-white backdrop-blur font-semibold">
             {venue.type}
           </span>
           <span className="rounded-full bg-primary px-2 py-1 text-[9px] font-bold uppercase tracking-widest text-primary-foreground shadow-xs">Demo</span>
@@ -281,12 +309,12 @@ export function VenueCard({ venue, index = 0, tall = false }: { venue: Venue; in
           <ArrowUpRight className="size-5" />
         </div>
         <div className="absolute inset-x-0 bottom-0 p-5 md:p-6">
-          <p className="eyebrow">{venue.area}</p>
-          <h3 className="mt-2 text-3xl font-bold md:text-4xl text-card-foreground">{venue.name}</h3>
-          <p className="mt-1 text-sm text-card-foreground/75">{venue.tagline}</p>
+          <p className="eyebrow text-primary">{venue.area}</p>
+          <h3 className="mt-2 text-3xl font-bold md:text-4xl text-white">{venue.name}</h3>
+          <p className="mt-1 text-sm text-white/80">{venue.tagline}</p>
           <div className="grid grid-rows-[0fr] transition-all duration-500 group-hover:grid-rows-[1fr]">
             <div className="overflow-hidden">
-              <div className="mt-4 flex items-center justify-between border-t border-border pt-4 text-xs text-card-foreground/75">
+              <div className="mt-4 flex items-center justify-between border-t border-white/20 pt-4 text-xs text-white/80">
                 <span>{venue.nights.join(" · ")} · {venue.capacity}</span>
                 <span className="text-primary font-semibold">From {venue.minSpend}</span>
               </div>
