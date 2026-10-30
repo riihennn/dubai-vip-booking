@@ -10,10 +10,10 @@ export const Route = createFileRoute("/contact")({
 
 function Contact() {
   const items = [
-    [MessageCircle, "WhatsApp (demo)", brand.phone, waLink("Hi Dubai VIP Booking!")],
-    [Mail, "Email (demo)", brand.email, `mailto:${brand.email}`],
+    [MessageCircle, "WhatsApp", brand.phone, waLink("Hi Dubai VIP Booking!")],
+    [Mail, "Email", brand.email, `mailto:${brand.email}`],
     [Globe, "Website", brand.website, "#"],
-    [Clock, "Hours (sample)", brand.hours, "#"],
+    [Clock, "Concierge Hours", brand.hours, "#"],
   ] as const;
   return (
     <>

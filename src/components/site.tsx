@@ -203,8 +203,10 @@ export function Footer() {
             </div>
           ))}
         </div>
-        <p className="mt-12 rounded-sm border border-primary/30 bg-primary/5 p-4 text-xs text-foreground/70"><span className="eyebrow mr-2">Demo data</span>All venues, prices, contact details and figures on this site are fictional placeholders. The WhatsApp number +971 50 000 0000 is not active.</p>
-        <p className="mt-6 text-xs text-muted-foreground">© 2026 Dubai VIP Booking · dubaivipbooking.com. 21+ only. Please drink responsibly.</p>
+        <div className="mt-12 border-t border-border pt-8 space-y-2 text-xs text-muted-foreground leading-relaxed">
+          <p>© 2026 Dubai VIP Booking. All rights reserved.</p>
+          <p>Dubai VIP Booking is operated by WaltX Limited, licensed by Masdar City Free Zone, Abu Dhabi, UAE (Licence No. MC 14979).</p>
+        </div>
       </div>
     </footer>
   );
@@ -303,7 +305,6 @@ export function VenueCard({ venue, index = 0, tall = false }: { venue: Venue; in
           <span className="rounded-full border border-white/20 bg-black/60 px-3 py-1 text-[10px] uppercase tracking-[0.25em] text-white backdrop-blur font-semibold">
             {venue.type}
           </span>
-          <span className="rounded-full bg-primary px-2 py-1 text-[9px] font-bold uppercase tracking-widest text-primary-foreground shadow-xs">Demo</span>
         </div>
         <div className="absolute right-4 top-4 grid size-10 place-items-center rounded-full bg-primary text-primary-foreground opacity-0 transition-all duration-500 group-hover:rotate-45 group-hover:opacity-100">
           <ArrowUpRight className="size-5" />
@@ -315,8 +316,8 @@ export function VenueCard({ venue, index = 0, tall = false }: { venue: Venue; in
           <div className="grid grid-rows-[0fr] transition-all duration-500 group-hover:grid-rows-[1fr]">
             <div className="overflow-hidden">
               <div className="mt-4 flex items-center justify-between border-t border-white/20 pt-4 text-xs text-white/80">
-                <span>{venue.nights.join(" · ")} · {venue.capacity}</span>
-                <span className="text-primary font-semibold">From {venue.minSpend}</span>
+                <span>{venue.nights.join(" · ")}{venue.capacity ? ` · ${venue.capacity}` : ""}</span>
+                <span className="text-primary font-semibold">{venue.minSpend.startsWith("AED") ? `From ${venue.minSpend}` : venue.minSpend}</span>
               </div>
             </div>
           </div>

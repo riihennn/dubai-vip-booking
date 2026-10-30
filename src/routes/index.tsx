@@ -83,9 +83,9 @@ function Home() {
           <Reveal className="relative">
             <img src={images.vip} alt="VIP table service" loading="lazy" className="aspect-[4/5] w-full rounded-sm object-cover" />
             <div className="absolute -bottom-6 -right-2 rounded-sm border border-border bg-card/90 p-5 backdrop-blur md:-right-8">
-              <p className="eyebrow">Signature VIP</p>
-              <p className="mt-1 font-display text-3xl font-bold">AED 8,000</p>
-              <p className="text-xs text-muted-foreground">min. spend · up to 14 guests · demo</p>
+              <p className="eyebrow">VIP Bottle Service</p>
+              <p className="mt-1 font-display text-2xl font-bold">Prime Positions</p>
+              <p className="text-xs text-muted-foreground">Tailored spends · Direct door confirmation</p>
             </div>
           </Reveal>
           <Reveal delay={0.1}>
@@ -93,10 +93,14 @@ function Home() {
             <h2 className="display-lg mt-4">The table <span className="text-gold">is the show.</span></h2>
             <p className="mt-6 max-w-md text-foreground/70">Sparkler parades, DJ-side booths and hosts who know your name. We negotiate minimum spends and hold the best positions in the room.</p>
             <ul className="mt-8 divide-y divide-border border-y border-border">
-              {[["Standard Table", "Up to 6", "from AED 2,000"], ["Premium Booth", "Up to 10", "from AED 4,000"], ["Signature VIP", "Up to 14", "from AED 8,000"]].map(([n, g, p]) => (
+              {[
+                ["Standard Table", "Main room & dance floor", "Spend on enquiry"],
+                ["Premium Booth", "Elevated & DJ-side", "Spend on enquiry"],
+                ["Signature VIP", "Centre-stage & prime position", "Spend on enquiry"]
+              ].map(([n, g, p]) => (
                 <li key={n} className="group flex items-center justify-between py-5 transition-colors hover:text-primary">
                   <span className="font-display text-xl font-bold md:text-2xl">{n}</span>
-                  <span className="text-sm text-muted-foreground">{g} · {p}</span>
+                  <span className="text-sm text-muted-foreground">{g} · <span className="text-primary font-semibold">{p}</span></span>
                 </li>
               ))}
             </ul>

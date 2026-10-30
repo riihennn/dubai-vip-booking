@@ -13,7 +13,7 @@ function Partner() {
       <PageHero eyebrow="For venues & promoters" title={<>Fill the room <span className="text-gold">with the right crowd.</span></>} image={images.supper} />
       <Section>
         <div className="grid gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-3">
-          {[["12k+", "Guests hosted yearly (demo)"], ["6", "Demo partner venues"], ["< 5 min", "Average reply time (demo)"]].map(([n, l], i) => (
+          {[["20+", "Curated nightlife venues"], ["2", "Flagship cities: Dubai & Abu Dhabi"], ["< 5 min", "Average concierge reply time"]].map(([n, l], i) => (
             <Reveal key={l} delay={i * 0.08} className="bg-background p-10">
               <p className="font-display text-6xl font-extrabold text-gold">{n}</p>
               <p className="mt-3 text-muted-foreground">{l}</p>

@@ -31,7 +31,7 @@ function VenueDetail() {
         <div>
           <Reveal><p className="text-2xl leading-relaxed text-foreground/85 md:text-3xl">{v.description}</p></Reveal>
           <div className="mt-12 grid grid-cols-2 gap-px overflow-hidden rounded-sm border border-border bg-border">
-            {[[Calendar, "Open", v.nights.join(" · ")], [Music, "Sound", v.music], [Shirt, "Dress code", v.dress], [Users, "Min. spend", `${v.minSpend} · ${v.capacity}`]].map(([I, l, val]) => {
+            {[[Calendar, "Open", v.nights.join(" · ")], [Music, "Sound", v.music], [Shirt, "Dress code", v.dress], [Users, "Min. spend", v.capacity ? `${v.minSpend} · ${v.capacity}` : v.minSpend]].map(([I, l, val]) => {
               const Icon = I as typeof Calendar;
               return (
                 <div key={l as string} className="bg-background p-6">
@@ -42,6 +42,18 @@ function VenueDetail() {
               );
             })}
           </div>
+          {v.address && (
+            <p className="mt-6 text-sm text-muted-foreground">
+              <span className="font-semibold text-foreground/85">Address: </span>
+              {v.googleMapsUrl ? (
+                <a href={v.googleMapsUrl} target="_blank" rel="noreferrer" className="hover:text-primary underline">
+                  {v.address}
+                </a>
+              ) : (
+                v.address
+              )}
+            </p>
+          )}
           <Reveal className="mt-16">
             <p className="eyebrow">Table options</p>
             <h2 className="display-lg mt-3">Pick your position.</h2>
@@ -50,7 +62,7 @@ function VenueDetail() {
                 <div key={t.name} className="group flex flex-col justify-between gap-4 rounded-sm border border-border p-6 transition-all duration-500 hover:border-primary hover:bg-card sm:flex-row sm:items-center">
                   <div className="flex items-center gap-5">
                     <span className="font-display text-4xl font-extrabold text-foreground/20 transition-colors group-hover:text-primary">0{i + 1}</span>
-                    <div><p className="text-xl font-bold">{t.name}</p><p className="text-sm text-muted-foreground">{t.guests} · min. {t.spend}</p></div>
+                    <div><p className="text-xl font-bold">{t.name}</p><p className="text-sm text-muted-foreground">{t.guests ? `${t.guests} · ` : ""}{t.spend.startsWith("AED") ? `min. ${t.spend}` : t.spend}</p></div>
                   </div>
                   <WhatsAppButton size="sm" message={`Hi Dubai VIP Booking, I'd like the ${t.name} at ${v.name}.`}>Enquire</WhatsAppButton>
                 </div>
@@ -60,7 +72,7 @@ function VenueDetail() {
         </div>
         <aside className="md:sticky md:top-28 md:self-start">
           <div className="rounded-sm border border-border bg-card p-6 md:p-8">
-            <p className="eyebrow">Book {v.name} <span className="ml-2 rounded-full border border-primary/40 px-2 py-0.5 text-[9px]">Demo venue</span></p>
+            <p className="eyebrow">Book {v.name}</p>
             <p className="mt-3 font-display text-3xl font-bold">Reserve in one message</p>
             <p className="mt-3 text-sm text-muted-foreground">Tell us your date, group size and vibe. A concierge replies within minutes.</p>
             <div className="mt-6 space-y-3 text-sm">

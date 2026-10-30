@@ -1,0 +1,801 @@
+[
+  {
+    "id": "bling-dubai",
+    "name": "BLING",
+    "city": "Dubai",
+    "area": "Palm Jumeirah",
+    "slug": "bling-dubai",
+    "venueType": "Luxury Nightclub",
+    "address": "FIVE Palm Jumeirah, No. 1 Palm Jumeirah, Dubai, United Arab Emirates",
+    "officialWebsite": "https://blingdxb.com",
+    "instagram": "https://www.instagram.com/blingdxb/",
+    "googleMapsUrl": "https://maps.google.com/?q=BLING+FIVE+Palm+Jumeirah+Dubai",
+    "description": "An ultra-luxury nightclub at FIVE Palm Jumeirah featuring private indoor supercar entrance, world-renowned DJs, and high-energy VIP table service.",
+    "tagline": "Supercars and high-octane hip-hop on the Palm",
+    "images": [
+      {
+        "url": "/images/venues/bling-dubai.jpg",
+        "alt": "BLING nightclub interior at FIVE Palm Jumeirah",
+        "source": "Official FIVE Palm Jumeirah Media"
+      }
+    ],
+    "image": "/images/venues/bling-dubai.jpg",
+    "openingNights": ["Tue", "Thu", "Fri", "Sat", "Sun"],
+    "openingHours": "10:00 PM – 3:00 AM (Tue, Thu–Sun)",
+    "dressCode": "Smart elegant / Luxury nightlife attire",
+    "publishedMinimumSpend": null,
+    "confirmedMinimumSpend": null,
+    "capacity": null,
+    "music": "Hip-Hop · R&B · Commercial",
+    "reservationContact": "+971 58 869 8996",
+    "partnershipStatus": "unconfirmed",
+    "verificationStatus": "verified",
+    "operatingStatus": "open",
+    "active": true,
+    "sources": [
+      { "name": "BLING Official Website", "url": "https://blingdxb.com", "status": "verified" },
+      { "name": "FIVE Palm Jumeirah Directory", "url": "https://palmjumeirah.fivehotelsandresorts.com/eat-drink/bling", "status": "verified" }
+    ]
+  },
+  {
+    "id": "bla-bla-dubai",
+    "name": "Bla Bla Dubai",
+    "city": "Dubai",
+    "area": "JBR",
+    "slug": "bla-bla-dubai",
+    "venueType": "Beach Club & Nightlife",
+    "address": "5101 Messer Street, The Beach, JBR, Dubai, United Arab Emirates",
+    "officialWebsite": "https://blabladubai.ae",
+    "instagram": "https://www.instagram.com/blablabymcgettigans/",
+    "googleMapsUrl": "https://maps.google.com/?q=Bla+Bla+Dubai+JBR",
+    "description": "A massive day-to-night beachfront destination at JBR featuring 20 distinct bars, an energetic beach club pool, rooftop terraces, and The Tent nightclub.",
+    "tagline": "20 bars, one beach club, infinite energy",
+    "images": [
+      {
+        "url": "/images/venues/bla-bla-dubai.jpg",
+        "alt": "Bla Bla Beach Club and pool overlooking Ain Dubai",
+        "source": "Official Bla Bla Dubai Media"
+      }
+    ],
+    "image": "/images/venues/bla-bla-dubai.jpg",
+    "openingNights": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+    "openingHours": "Beach Club: 10:00 AM – late; Nightclub: 10:00 PM – 3:00 AM",
+    "dressCode": "Beachwear by day; Smart casual after dark (no sportswear or flip-flops in indoor venues)",
+    "publishedMinimumSpend": null,
+    "confirmedMinimumSpend": null,
+    "capacity": null,
+    "music": "Live Bands · House · Commercial · Hip-Hop",
+    "reservationContact": "+971 4 584 4111",
+    "partnershipStatus": "unconfirmed",
+    "verificationStatus": "verified",
+    "operatingStatus": "open",
+    "active": true,
+    "sources": [
+      { "name": "Bla Bla Dubai Official Website", "url": "https://blabladubai.ae", "status": "verified" },
+      { "name": "Bla Bla Official Instagram", "url": "https://www.instagram.com/blablabymcgettigans/", "status": "verified" }
+    ]
+  },
+  {
+    "id": "playa-pacha-dubai",
+    "name": "Playa Pacha",
+    "city": "Dubai",
+    "area": "JBR",
+    "slug": "playa-pacha-dubai",
+    "venueType": "Luxury Beach Club",
+    "address": "FIVE LUXE, The Walk, JBR, Dubai, United Arab Emirates",
+    "officialWebsite": "https://www.playapachadubai.com",
+    "instagram": "https://www.instagram.com/playapachadubai/",
+    "googleMapsUrl": "https://maps.google.com/?q=Playa+Pacha+FIVE+LUXE+JBR",
+    "description": "The iconic Ibiza party brand at FIVE LUXE JBR, combining chic Mediterranean poolside luxury with headline international electronic music acts.",
+    "tagline": "Ibiza spirit meets Arabian Gulf beachfront",
+    "images": [
+      {
+        "url": "/images/venues/playa-pacha-dubai.webp",
+        "alt": "Playa Pacha beach club pool at FIVE LUXE JBR",
+        "source": "Official Playa Pacha Media"
+      }
+    ],
+    "image": "/images/venues/playa-pacha-dubai.webp",
+    "openingNights": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+    "openingHours": "Daily 10:00 AM – Sunset (Party nights until late)",
+    "dressCode": "Upscale chic beachwear; stylish resort evening wear for events (21+ for parties)",
+    "publishedMinimumSpend": null,
+    "confirmedMinimumSpend": null,
+    "capacity": null,
+    "music": "House · Tech House · Melodic Techno",
+    "reservationContact": "+971 4 275 9999",
+    "partnershipStatus": "unconfirmed",
+    "verificationStatus": "verified",
+    "operatingStatus": "open",
+    "active": true,
+    "sources": [
+      { "name": "Playa Pacha Official Website", "url": "https://www.playapachadubai.com", "status": "verified" },
+      { "name": "FIVE LUXE JBR", "url": "https://luxejbr.fivehotelsandresorts.com", "status": "verified" }
+    ]
+  },
+  {
+    "id": "zeta-seventy-seven",
+    "name": "ZETA Seventy Seven",
+    "city": "Dubai",
+    "area": "JBR",
+    "slug": "zeta-seventy-seven",
+    "venueType": "Rooftop Lounge",
+    "address": "Level 77, Address Beach Resort, The Walk, JBR, Dubai, United Arab Emirates",
+    "officialWebsite": "https://www.zetaseventyseven.com",
+    "instagram": "https://www.instagram.com/zetaseventyseven/",
+    "googleMapsUrl": "https://maps.google.com/?q=ZETA+Seventy+Seven+Address+Beach+Resort",
+    "description": "An open-air oasis on the 77th floor of Address Beach Resort adjacent to the world's highest outdoor infinity pool, showcasing Asian fusion cuisine and skyline vistas.",
+    "tagline": "Sky-high Asian dining and cocktails on Level 77",
+    "images": [
+      {
+        "url": "/images/venues/zeta-seventy-seven.jpg",
+        "alt": "ZETA Seventy Seven infinity pool and lounge overlooking Ain Dubai",
+        "source": "Official Address Beach Resort Media"
+      }
+    ],
+    "image": "/images/venues/zeta-seventy-seven.jpg",
+    "openingNights": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+    "openingHours": "Sun–Thu 8:00 AM – 12:00 AM; Fri–Sat 8:00 AM – 1:00 AM",
+    "dressCode": "Smart and elegant (21+ in evening lounge)",
+    "publishedMinimumSpend": null,
+    "confirmedMinimumSpend": null,
+    "capacity": null,
+    "music": "Lounge · Chill House · Ambient",
+    "reservationContact": "+971 4 879 8866",
+    "partnershipStatus": "unconfirmed",
+    "verificationStatus": "verified",
+    "operatingStatus": "open",
+    "active": true,
+    "sources": [
+      { "name": "ZETA Seventy Seven Official Website", "url": "https://www.zetaseventyseven.com", "status": "verified" },
+      { "name": "Address Hotels & Resorts", "url": "https://www.addresshotels.com", "status": "verified" }
+    ]
+  },
+  {
+    "id": "the-penthouse-dubai",
+    "name": "The Penthouse Dubai",
+    "city": "Dubai",
+    "area": "Palm Jumeirah",
+    "slug": "the-penthouse-dubai",
+    "venueType": "Rooftop Lounge & Nightclub",
+    "address": "16th Floor, FIVE Palm Jumeirah, No. 1 Palm Jumeirah, Dubai, United Arab Emirates",
+    "officialWebsite": "https://thepenthouse.co",
+    "instagram": "https://www.instagram.com/thepenthousedubai/",
+    "googleMapsUrl": "https://maps.google.com/?q=The+Penthouse+FIVE+Palm+Jumeirah",
+    "description": "Dubai's premier rooftop day-club and evening lounge on the 16th floor of FIVE Palm Jumeirah, commanding unmatched views of the Dubai Marina skyline.",
+    "tagline": "Iconic Marina skyline views and headline international DJs",
+    "images": [
+      {
+        "url": "/images/venues/the-penthouse-dubai.webp",
+        "alt": "The Penthouse rooftop terrace overlooking Dubai Marina",
+        "source": "Official The Penthouse Media"
+      }
+    ],
+    "image": "/images/venues/the-penthouse-dubai.webp",
+    "openingNights": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+    "openingHours": "Sun–Thu 5:00 PM – 3:00 AM; Fri–Sat 5:00 PM – 4:00 AM",
+    "dressCode": "Smart casual / Stylish evening wear",
+    "publishedMinimumSpend": null,
+    "confirmedMinimumSpend": null,
+    "capacity": null,
+    "music": "Deep House · Tech House · Commercial",
+    "reservationContact": "+971 52 900 4868",
+    "partnershipStatus": "unconfirmed",
+    "verificationStatus": "verified",
+    "operatingStatus": "open",
+    "active": true,
+    "sources": [
+      { "name": "The Penthouse Official Website", "url": "https://thepenthouse.co", "status": "verified" },
+      { "name": "FIVE Palm Jumeirah", "url": "https://palmjumeirah.fivehotelsandresorts.com", "status": "verified" }
+    ]
+  },
+  {
+    "id": "the-myth-dubai",
+    "name": "The Myth",
+    "city": "Dubai",
+    "area": "Downtown Dubai",
+    "slug": "the-myth-dubai",
+    "venueType": "Luxury Nightclub",
+    "address": "Ground Floor, Sofitel Dubai Downtown, Sheikh Mohammed bin Rashid Blvd, Downtown Dubai, UAE",
+    "officialWebsite": "https://themythdubai.club",
+    "instagram": "https://www.instagram.com/themyth.club/",
+    "googleMapsUrl": "https://maps.google.com/?q=The+Myth+Sofitel+Dubai+Downtown",
+    "description": "An energetic nightlife club in the heart of Downtown Dubai inside Sofitel Dubai Downtown, presenting immersive visual productions, themed club nights, and VIP table service.",
+    "tagline": "High-energy nightlife at the foot of Burj Khalifa",
+    "images": [
+      {
+        "url": "/images/venues/the-myth-dubai.jpg",
+        "alt": "The Myth nightclub interior and VIP tables",
+        "source": "Curated Nightlife Gallery"
+      }
+    ],
+    "image": "/images/venues/the-myth-dubai.jpg",
+    "openingNights": ["Tue", "Thu", "Fri", "Sat", "Sun"],
+    "openingHours": "11:00 PM – 4:00 AM (Tue, Thu–Sun)",
+    "dressCode": "Smart casual / Classy clubwear (strictly 21+ with physical ID)",
+    "publishedMinimumSpend": null,
+    "confirmedMinimumSpend": null,
+    "capacity": null,
+    "music": "Hip-Hop · Commercial · Open Format",
+    "reservationContact": "+971 56 422 2200",
+    "partnershipStatus": "unconfirmed",
+    "verificationStatus": "partially_verified",
+    "operatingStatus": "open",
+    "active": true,
+    "sources": [
+      { "name": "The Myth Official Website", "url": "https://themythdubai.club", "status": "verified" },
+      { "name": "The Myth Official Instagram", "url": "https://www.instagram.com/themyth.club/", "status": "verified" }
+    ]
+  },
+  {
+    "id": "blu-dubai",
+    "name": "BLU Dubai",
+    "city": "Dubai",
+    "area": "Business Bay",
+    "slug": "blu-dubai",
+    "venueType": "VIP Nightclub",
+    "address": "32nd Floor, V Hotel Dubai, Al Habtoor City, 260 Sheikh Zayed Rd, Dubai, United Arab Emirates",
+    "officialWebsite": "https://bludubai.ae",
+    "instagram": "https://www.instagram.com/bludubai/",
+    "googleMapsUrl": "https://maps.google.com/?q=BLU+Dubai+V+Hotel+Al+Habtoor+City",
+    "description": "Perched high on the 32nd floor of the V Hotel in Al Habtoor City, BLU Dubai is globally famed for epic A-list artist performances, cutting-edge visuals, and premium bottle service.",
+    "tagline": "Skyline clubbing and superstar performances",
+    "images": [
+      {
+        "url": "/images/venues/blu-dubai.jpg",
+        "alt": "BLU Dubai nightclub main room lighting and stage",
+        "source": "Curated Venue Media"
+      }
+    ],
+    "image": "/images/venues/blu-dubai.jpg",
+    "openingNights": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+    "openingHours": "Daily 10:00 PM – 4:00 AM",
+    "dressCode": "Smart & elegant / Modern classy (strictly no sportswear, caps, or flip-flops)",
+    "publishedMinimumSpend": null,
+    "confirmedMinimumSpend": null,
+    "capacity": null,
+    "music": "Hip-Hop · Afrobeats · Open Format",
+    "reservationContact": "+971 56 501 2039",
+    "partnershipStatus": "unconfirmed",
+    "verificationStatus": "verified",
+    "operatingStatus": "open",
+    "active": true,
+    "sources": [
+      { "name": "BLU Dubai Official Website", "url": "https://bludubai.ae", "status": "verified" },
+      { "name": "BLU Dubai Official Instagram", "url": "https://www.instagram.com/bludubai/", "status": "verified" }
+    ]
+  },
+  {
+    "id": "bohemia-beach-club",
+    "name": "Bohemia Beach Club",
+    "city": "Dubai",
+    "area": "Palm Jumeirah",
+    "slug": "bohemia-beach-club",
+    "venueType": "Beach Club",
+    "address": "FIVE Palm Jumeirah, No. 1 Palm Jumeirah, Dubai, United Arab Emirates",
+    "officialWebsite": "https://bohemiadubai.com",
+    "instagram": "https://www.instagram.com/fivepalmjumeirah/",
+    "googleMapsUrl": "https://maps.google.com/?q=Bohemia+Beach+Club+FIVE+Palm+Jumeirah",
+    "description": "A high-octane beachfront venue at FIVE Palm Jumeirah celebrated for its signature Saturday electronic music festivals, seaside cabanas, and sunbed experiences.",
+    "tagline": "Beachfront festival vibes and international DJ sessions",
+    "images": [
+      {
+        "url": "/images/venues/bohemia-beach-club.jpg",
+        "alt": "Bohemia Beach Club pool and beach loungers at FIVE Palm Jumeirah",
+        "source": "Official FIVE Palm Jumeirah Media"
+      }
+    ],
+    "image": "/images/venues/bohemia-beach-club.jpg",
+    "openingNights": ["Thu", "Fri", "Sat", "Sun"],
+    "openingHours": "9:00 AM – Sunset (Saturday Bohemia Presents runs late)",
+    "dressCode": "Chic beachwear by day; smart casual after 7:00 PM",
+    "publishedMinimumSpend": null,
+    "confirmedMinimumSpend": null,
+    "capacity": null,
+    "music": "Melodic House · Techno · Electronic",
+    "reservationContact": "+971 4 455 9989",
+    "partnershipStatus": "unconfirmed",
+    "verificationStatus": "verified",
+    "operatingStatus": "open",
+    "active": true,
+    "sources": [
+      { "name": "Bohemia Official Website", "url": "https://bohemiadubai.com", "status": "verified" },
+      { "name": "FIVE Palm Jumeirah", "url": "https://palmjumeirah.fivehotelsandresorts.com", "status": "verified" }
+    ]
+  },
+  {
+    "id": "ling-ling-dubai",
+    "name": "Ling Ling Dubai",
+    "city": "Dubai",
+    "area": "Palm Jumeirah",
+    "slug": "ling-ling-dubai",
+    "venueType": "Ultra Lounge & Restaurant",
+    "address": "Level 23, Atlantis The Royal, Crescent Rd, Palm Jumeirah, Dubai, United Arab Emirates",
+    "officialWebsite": "https://linglingdubai.com",
+    "instagram": "https://www.instagram.com/linglingdubai/",
+    "googleMapsUrl": "https://maps.google.com/?q=Ling+Ling+Dubai+Atlantis+The+Royal",
+    "description": "Perched 23 levels up at Atlantis The Royal, Ling Ling is a seductive dining and late-night lounge experience seamlessly blending contemporary Asian cuisine with pulsating DJ sets.",
+    "tagline": "Ultra-lounge dining 23 floors above Atlantis The Royal",
+    "images": [
+      {
+        "url": "/images/venues/ling-ling-dubai.jpg",
+        "alt": "Ling Ling Dubai dining room and cocktail lounge",
+        "source": "Curated Hospitality Media"
+      }
+    ],
+    "image": "/images/venues/ling-ling-dubai.jpg",
+    "openingNights": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+    "openingHours": "Daily 6:00 PM – 1:00 AM (Thu–Sat lounge open until 3:00 AM)",
+    "dressCode": "Smart chic / Elegant evening wear (no shorts or sportswear)",
+    "publishedMinimumSpend": null,
+    "confirmedMinimumSpend": null,
+    "capacity": null,
+    "music": "Eclectic Deep House · Afro House · Melodic",
+    "reservationContact": "+971 4 426 2600",
+    "partnershipStatus": "unconfirmed",
+    "verificationStatus": "verified",
+    "operatingStatus": "open",
+    "active": true,
+    "sources": [
+      { "name": "Ling Ling Official Website", "url": "https://linglingdubai.com", "status": "verified" },
+      { "name": "Atlantis The Royal Portal", "url": "https://www.atlantis.com/dubai/restaurants/ling-ling", "status": "verified" }
+    ]
+  },
+  {
+    "id": "soho-garden-meydan",
+    "name": "Soho Garden DXB",
+    "city": "Dubai",
+    "area": "Meydan",
+    "slug": "soho-garden-meydan",
+    "venueType": "Nightlife Complex",
+    "address": "Meydan Racecourse Grandstand, Al Meydan Rd, Nad Al Sheba 1, Dubai, UAE",
+    "officialWebsite": "https://sohogardendxb.com",
+    "instagram": "https://www.instagram.com/sohogardendxb/",
+    "googleMapsUrl": "https://maps.google.com/?q=Soho+Garden+DXB+Meydan",
+    "description": "A sprawling nightlife and music festival destination at Meydan Racecourse comprising multiple interconnected club spaces, indoor arenas, and global headliner stages.",
+    "tagline": "Dubai's landmark nightlife and electronic music playground",
+    "images": [
+      {
+        "url": "/images/venues/soho-garden-meydan.jpg",
+        "alt": "Soho Garden Meydan festival stage and crowd",
+        "source": "Curated Event Media"
+      }
+    ],
+    "image": "/images/venues/soho-garden-meydan.jpg",
+    "openingNights": ["Wed", "Thu", "Fri", "Sat", "Sun"],
+    "openingHours": "8:00 PM – 3:00 AM / 4:00 AM",
+    "dressCode": "Smart casual / Dress to impress (strictly 21+ with physical ID)",
+    "publishedMinimumSpend": null,
+    "confirmedMinimumSpend": null,
+    "capacity": null,
+    "music": "Techno · House · Hip-Hop · Live Performances",
+    "reservationContact": "+971 52 388 8849",
+    "partnershipStatus": "unconfirmed",
+    "verificationStatus": "verified",
+    "operatingStatus": "open",
+    "active": true,
+    "sources": [
+      { "name": "Soho Garden Official Website", "url": "https://sohogardendxb.com", "status": "verified" },
+      { "name": "Soho Garden Instagram", "url": "https://www.instagram.com/sohogardendxb/", "status": "verified" }
+    ]
+  },
+  {
+    "id": "armani-prive-dubai",
+    "name": "Armani/Privé",
+    "city": "Dubai",
+    "area": "Downtown Dubai",
+    "slug": "armani-prive-dubai",
+    "venueType": "Designer Nightclub",
+    "address": "Lobby Level, Armani Hotel Dubai, Burj Khalifa, Downtown Dubai, United Arab Emirates",
+    "officialWebsite": "https://www.armanihoteldubai.com",
+    "instagram": "https://www.instagram.com/armaniprivedxb/",
+    "googleMapsUrl": "https://maps.google.com/?q=Armani+Prive+Burj+Khalifa",
+    "description": "An ultra-chic haute-couture nightlife lounge conceived by Giorgio Armani inside the Burj Khalifa. Currently temporarily closed for property refurbishment.",
+    "tagline": "Haute couture clubbing inside the Burj Khalifa",
+    "images": [
+      {
+        "url": "/images/venues/armani-prive-dubai.jpg",
+        "alt": "Armani Privé Dubai lounge and VIP booths",
+        "source": "Curated Hospitality Archive"
+      }
+    ],
+    "image": "/images/venues/armani-prive-dubai.jpg",
+    "openingNights": [],
+    "openingHours": "Temporarily closed for refurbishment",
+    "dressCode": "Smart chic / High fashion",
+    "publishedMinimumSpend": null,
+    "confirmedMinimumSpend": null,
+    "capacity": null,
+    "music": "House · Commercial · Lounge",
+    "reservationContact": "+971 4 888 3308",
+    "partnershipStatus": "unconfirmed",
+    "verificationStatus": "verified",
+    "operatingStatus": "temporarily_closed",
+    "active": false,
+    "sources": [
+      { "name": "Armani Hotel Dubai Official Portal", "url": "https://www.armanihoteldubai.com", "status": "verified" },
+      { "name": "Downtown Dubai Tourism", "url": "https://www.dwntwna.com", "status": "verified" }
+    ]
+  },
+  {
+    "id": "white-abu-dhabi",
+    "name": "WHITE Abu Dhabi",
+    "city": "Abu Dhabi",
+    "area": "Yas Island",
+    "slug": "white-abu-dhabi",
+    "venueType": "Mega Nightclub",
+    "address": "Yas Bay Waterfront, Yas Island, Abu Dhabi, United Arab Emirates",
+    "officialWebsite": "https://www.yasbay.ae/dine-in/white-abu-dhabi/",
+    "instagram": "https://www.instagram.com/whiteabudhabi/",
+    "googleMapsUrl": "https://maps.google.com/?q=WHITE+Abu+Dhabi+Yas+Bay",
+    "description": "The capital's flagship multi-award-winning nightclub on Yas Bay Waterfront, featuring cutting-edge acoustic engineering, kinetic lighting, and world-class live performers.",
+    "tagline": "The capital's premier multi-award-winning mega nightclub",
+    "images": [
+      {
+        "url": "/images/venues/white-abu-dhabi.jpg",
+        "alt": "WHITE Abu Dhabi stage and aerial lighting setup",
+        "source": "Official Yas Bay Waterfront Media"
+      }
+    ],
+    "image": "/images/venues/white-abu-dhabi.jpg",
+    "openingNights": ["Fri", "Sat"],
+    "openingHours": "Friday & Saturday 11:00 PM – 3:30 AM",
+    "dressCode": "Smart elegant / Chic clubwear (strictly 21+ with physical ID)",
+    "publishedMinimumSpend": null,
+    "confirmedMinimumSpend": null,
+    "capacity": null,
+    "music": "Hip-Hop · R&B · Commercial House",
+    "reservationContact": "+971 50 639 8934",
+    "partnershipStatus": "unconfirmed",
+    "verificationStatus": "verified",
+    "operatingStatus": "open",
+    "active": true,
+    "sources": [
+      { "name": "Yas Bay Waterfront Destination Directory", "url": "https://www.yasbay.ae/dine-in/white-abu-dhabi/", "status": "verified" },
+      { "name": "Visit Abu Dhabi Official Tourism Portal", "url": "https://visitabudhabi.ae", "status": "verified" }
+    ]
+  },
+  {
+    "id": "siddharta-lounge-abu-dhabi",
+    "name": "Siddharta Lounge by Buddha-Bar",
+    "city": "Abu Dhabi",
+    "area": "Yas Island",
+    "slug": "siddharta-lounge-abu-dhabi",
+    "venueType": "Rooftop Lounge",
+    "address": "The Pier, Yas Bay Waterfront, Yas Island, Abu Dhabi, United Arab Emirates",
+    "officialWebsite": "https://www.siddhartalounge-abudhabi.com",
+    "instagram": "https://www.instagram.com/siddhartalounge_abudhabi/",
+    "googleMapsUrl": "https://maps.google.com/?q=Siddharta+Lounge+by+Buddha-Bar+Yas+Bay",
+    "description": "A glamorous rooftop lounge and Mediterranean-Asian restaurant perched on The Pier at Yas Bay Waterfront, renowned for 360-degree sunset vistas and resident DJ rhythms.",
+    "tagline": "Sunset cocktails and Buddha-Bar beats on The Pier",
+    "images": [
+      {
+        "url": "/images/venues/siddharta-lounge-abu-dhabi.jpg",
+        "alt": "Siddharta Lounge by Buddha-Bar rooftop terrace over Yas Bay",
+        "source": "Official Yas Bay Waterfront Media"
+      }
+    ],
+    "image": "/images/venues/siddharta-lounge-abu-dhabi.jpg",
+    "openingNights": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+    "openingHours": "Sun–Thu 5:00 PM – 2:00 AM; Fri–Sat 5:00 PM – 3:00 AM",
+    "dressCode": "Smart casual",
+    "publishedMinimumSpend": null,
+    "confirmedMinimumSpend": null,
+    "capacity": null,
+    "music": "Buddha-Bar Chill-Out · Deep House · Ethnic Beats",
+    "reservationContact": "+971 50 601 1194",
+    "partnershipStatus": "unconfirmed",
+    "verificationStatus": "verified",
+    "operatingStatus": "open",
+    "active": true,
+    "sources": [
+      { "name": "Siddharta Lounge Official Website", "url": "https://www.siddhartalounge-abudhabi.com", "status": "verified" },
+      { "name": "Yas Bay Waterfront Portal", "url": "https://www.yasbay.ae/dine-in/siddhartha-lounge/", "status": "verified" }
+    ]
+  },
+  {
+    "id": "buddha-bar-beach-abu-dhabi",
+    "name": "Buddha-Bar Beach Abu Dhabi",
+    "city": "Abu Dhabi",
+    "area": "Saadiyat Island",
+    "slug": "buddha-bar-beach-abu-dhabi",
+    "venueType": "Beachfront Lounge",
+    "address": "The St. Regis Saadiyat Island Resort, Saadiyat Island, Abu Dhabi, UAE",
+    "officialWebsite": "https://www.buddhabarbeachabudhabi.com",
+    "instagram": "https://www.instagram.com/buddhabarbeachabudhabi/",
+    "googleMapsUrl": "https://maps.google.com/?q=Buddha-Bar+Beach+Abu+Dhabi+St+Regis",
+    "description": "An iconic day-to-night beachfront haven on the pure white sands of Saadiyat Island, uniting Pacific Rim flavours with the legendary Buddha-Bar sound.",
+    "tagline": "Legendary Buddha-Bar chillout sound on Saadiyat's white sands",
+    "images": [
+      {
+        "url": "/images/venues/buddha-bar-beach-abu-dhabi.jpg",
+        "alt": "Buddha-Bar Beach Saadiyat terrace and beach tables",
+        "source": "Official Marriott St. Regis Media CDN"
+      }
+    ],
+    "image": "/images/venues/buddha-bar-beach-abu-dhabi.jpg",
+    "openingNights": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+    "openingHours": "Mon–Thu 5:00 PM – 12:00 AM; Fri–Sun 1:00 PM – 12:00 AM",
+    "dressCode": "Casual by day; Smart casual evening onwards",
+    "publishedMinimumSpend": null,
+    "confirmedMinimumSpend": null,
+    "capacity": null,
+    "music": "Buddha-Bar World Sound · Melodic House · Sunset Grooves",
+    "reservationContact": "+971 2 498 8888",
+    "partnershipStatus": "unconfirmed",
+    "verificationStatus": "verified",
+    "operatingStatus": "open",
+    "active": true,
+    "sources": [
+      { "name": "Buddha-Bar Beach Official Website", "url": "https://www.buddhabarbeachabudhabi.com", "status": "verified" },
+      { "name": "The St. Regis Saadiyat Island Resort", "url": "https://www.marriott.com", "status": "verified" }
+    ]
+  },
+  {
+    "id": "ilios-beach-club",
+    "name": "Ilios Restaurant & Beach Club",
+    "city": "Abu Dhabi",
+    "area": "Hudayriyat Island",
+    "slug": "ilios-beach-club",
+    "venueType": "Beach Club & Lounge",
+    "address": "Surf Abu Dhabi, Hudayriyat Island, Abu Dhabi, United Arab Emirates",
+    "officialWebsite": "https://www.hudayriyatisland.ae/en/venues/ilios-beach-club",
+    "instagram": "https://www.instagram.com/ilios.abudhabi/",
+    "googleMapsUrl": "https://maps.google.com/?q=Ilios+Beach+Club+Hudayriyat+Island",
+    "description": "An Aegean-inspired beach club and dining venue at Surf Abu Dhabi, presenting Greek coastal aesthetics, luxurious sun loungers, and lively evening social sessions.",
+    "tagline": "Mykonos-inspired beach dining and sunset sessions",
+    "images": [
+      {
+        "url": "/images/venues/ilios-beach-club.jpg",
+        "alt": "Ilios Beach Club overlooking the Arabian Gulf at Hudayriyat Island",
+        "source": "Curated Coastal Hospitality Media"
+      }
+    ],
+    "image": "/images/venues/ilios-beach-club.jpg",
+    "openingNights": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+    "openingHours": "Mon–Thu 12:00 PM – 12:00 AM; Fri–Sun 11:00 AM – 12:00 AM",
+    "dressCode": "Beach chic by day; Smart casual for evening dining",
+    "publishedMinimumSpend": null,
+    "confirmedMinimumSpend": null,
+    "capacity": null,
+    "music": "Mediterranean Lounge · Organic House · Sunset Beats",
+    "reservationContact": "+971 2 419 8508",
+    "partnershipStatus": "unconfirmed",
+    "verificationStatus": "verified",
+    "operatingStatus": "open",
+    "active": true,
+    "sources": [
+      { "name": "Hudayriyat Island Official Directory", "url": "https://www.hudayriyatisland.ae/en/venues/ilios-beach-club", "status": "verified" },
+      { "name": "Surf Abu Dhabi Ilios", "url": "https://www.surfabudhabi.com/ilios", "status": "verified" }
+    ]
+  },
+  {
+    "id": "cafe-del-mar-abu-dhabi",
+    "name": "Café del Mar Abu Dhabi",
+    "city": "Abu Dhabi",
+    "area": "Yas Island",
+    "slug": "cafe-del-mar-abu-dhabi",
+    "venueType": "Luxury Beach Club",
+    "address": "Yas Bay Waterfront, Yas Island, Abu Dhabi, United Arab Emirates",
+    "officialWebsite": "https://cafedelmarabudhabi.com",
+    "instagram": "https://www.instagram.com/cafedelmarabudhabi/",
+    "googleMapsUrl": "https://maps.google.com/?q=Cafe+del+Mar+Abu+Dhabi+Yas+Bay",
+    "description": "Re-opened with a major revamp, Café del Mar Abu Dhabi features a 1,100 sqm infinity pool, private VIP cabanas with Jacuzzis, Mediterranean cuisine, and world-famous chillout sunset DJ sessions.",
+    "tagline": "World-famous Balearic chillout and infinity pool sessions",
+    "images": [
+      {
+        "url": "/images/venues/cafe-del-mar-abu-dhabi.jpg",
+        "alt": "Café del Mar Abu Dhabi infinity pool and VIP cabanas",
+        "source": "Curated Beach Club Media"
+      }
+    ],
+    "image": "/images/venues/cafe-del-mar-abu-dhabi.jpg",
+    "openingNights": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+    "openingHours": "Pool: 10:00 AM – 8:00 PM; Restaurant & Lounge: 12:00 PM – 2:00 AM / 3:00 AM",
+    "dressCode": "Daytime stylish swimwear; Smart casual for indoor dining & evening lounge",
+    "publishedMinimumSpend": null,
+    "confirmedMinimumSpend": null,
+    "capacity": null,
+    "music": "Balearic Chillout · Deep House · Sunset Grooves",
+    "reservationContact": "+971 50 402 2283",
+    "partnershipStatus": "unconfirmed",
+    "verificationStatus": "verified",
+    "operatingStatus": "open",
+    "active": true,
+    "sources": [
+      { "name": "Café del Mar Abu Dhabi Official Portal", "url": "https://cafedelmarabudhabi.com", "status": "verified" },
+      { "name": "Time Out Abu Dhabi Re-opening Feature", "url": "https://www.timeoutabudhabi.com", "status": "verified" }
+    ]
+  },
+  {
+    "id": "iris-yas-island",
+    "name": "Iris Yas Island",
+    "city": "Abu Dhabi",
+    "area": "Yas Island",
+    "slug": "iris-yas-island",
+    "venueType": "Sunset Lounge & Nightlife",
+    "address": "Yas Marina, Yas Island, Abu Dhabi, United Arab Emirates",
+    "officialWebsite": "https://www.irisabudhabi.com",
+    "instagram": "https://www.instagram.com/irisyasisland/",
+    "googleMapsUrl": "https://maps.google.com/?q=Iris+Yas+Island+Abu+Dhabi",
+    "description": "An al fresco lounge overlooking the luxury yachts of Yas Marina, famous for artisanal cocktails, refined music curation, and buzzing weekend party crowds.",
+    "tagline": "Marina-side sunset cocktails and melodic soundscapes",
+    "images": [
+      {
+        "url": "/images/venues/iris-yas-island.jpg",
+        "alt": "Iris Yas Island outdoor terrace overlooking Yas Marina",
+        "source": "Official Iris Yas Island Media"
+      }
+    ],
+    "image": "/images/venues/iris-yas-island.jpg",
+    "openingNights": ["Mon", "Wed", "Thu", "Fri", "Sat", "Sun"],
+    "openingHours": "Mon, Wed–Fri 6:30 PM – 3:30 AM; Sat 12:00 PM – 3:30 AM (Closed Tuesdays)",
+    "dressCode": "Smart casual",
+    "publishedMinimumSpend": null,
+    "confirmedMinimumSpend": null,
+    "capacity": null,
+    "music": "Melodic House · Deep Tech · Electronic",
+    "reservationContact": "+971 55 160 5636",
+    "partnershipStatus": "unconfirmed",
+    "verificationStatus": "verified",
+    "operatingStatus": "open",
+    "active": true,
+    "sources": [
+      { "name": "Iris Abu Dhabi Official Website", "url": "https://www.irisabudhabi.com", "status": "verified" },
+      { "name": "Yas Marina Destination Guide", "url": "https://www.yasmarina.ae", "status": "verified" }
+    ]
+  },
+  {
+    "id": "saadiyat-beach-club",
+    "name": "Saadiyat Beach Club",
+    "city": "Abu Dhabi",
+    "area": "Saadiyat Island",
+    "slug": "saadiyat-beach-club",
+    "venueType": "Private Beach Club",
+    "address": "Al Tilal St, Saadiyat Island, Abu Dhabi, United Arab Emirates",
+    "officialWebsite": "https://www.saadiyatbeachclub.ae",
+    "instagram": "https://www.instagram.com/saadiyatbeachclub/",
+    "googleMapsUrl": "https://maps.google.com/?q=Saadiyat+Beach+Club+Abu+Dhabi",
+    "description": "An exclusive beachfront sanctuary nestled along the natural dunes of Saadiyat Island, boasting private cabanas, an expansive pool, and luxury seaside dining.",
+    "tagline": "Private cabanas and pristine turquoise waters on Saadiyat",
+    "images": [
+      {
+        "url": "/images/venues/saadiyat-beach-club.jpg",
+        "alt": "Saadiyat Beach Club infinity pool and floating cabanas",
+        "source": "Official Saadiyat Beach Club Media"
+      }
+    ],
+    "image": "/images/venues/saadiyat-beach-club.jpg",
+    "openingNights": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+    "openingHours": "Daily 8:00 AM – 7:30 PM (Special evening events later)",
+    "dressCode": "Proper swimwear in pool/beach; Resort smart casual for indoor dining",
+    "publishedMinimumSpend": null,
+    "confirmedMinimumSpend": null,
+    "capacity": null,
+    "music": "Chilled Lounge · Ambient House",
+    "reservationContact": "+971 2 656 3500",
+    "partnershipStatus": "unconfirmed",
+    "verificationStatus": "verified",
+    "operatingStatus": "open",
+    "active": true,
+    "sources": [
+      { "name": "Saadiyat Beach Club Official Website", "url": "https://www.saadiyatbeachclub.ae", "status": "verified" },
+      { "name": "Saadiyat Island Destination", "url": "https://saadiyatisland.ae", "status": "verified" }
+    ]
+  },
+  {
+    "id": "rays-bar-abu-dhabi",
+    "name": "Ray's Bar",
+    "city": "Abu Dhabi",
+    "area": "Corniche",
+    "slug": "rays-bar-abu-dhabi",
+    "venueType": "Sky Lounge & Bar",
+    "address": "Level 62, Conrad Abu Dhabi Etihad Towers, Corniche Rd W, Abu Dhabi, UAE",
+    "officialWebsite": "https://www.hilton.com/en/hotels/auhetci-conrad-abu-dhabi-etihad-towers/dining/rays-bar/",
+    "instagram": "https://www.instagram.com/raysbarabudhabi/",
+    "googleMapsUrl": "https://maps.google.com/?q=Rays+Bar+Conrad+Abu+Dhabi+Etihad+Towers",
+    "description": "Perched on Level 62 of Conrad Abu Dhabi Etihad Towers, Ray's Bar offers sky-high cocktail mastery, resident DJ sets, and dramatic 360-degree views of the capital.",
+    "tagline": "Level 62 sky lounge overlooking the Arabian Gulf",
+    "images": [
+      {
+        "url": "/images/venues/rays-bar-abu-dhabi.jpg",
+        "alt": "Ray's Bar Level 62 cocktail lounge overlooking Abu Dhabi Corniche",
+        "source": "Curated Hospitality Archive"
+      }
+    ],
+    "image": "/images/venues/rays-bar-abu-dhabi.jpg",
+    "openingNights": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+    "openingHours": "Sun–Wed 5:00 PM – 1:00 AM; Thu–Fri 5:00 PM – 2:00 AM; Sat 1:00 PM – 2:00 AM",
+    "dressCode": "Smart casual / Elegant (strictly 21+ with physical ID)",
+    "publishedMinimumSpend": null,
+    "confirmedMinimumSpend": null,
+    "capacity": null,
+    "music": "Lounge House · Nu-Disco · Chillout",
+    "reservationContact": "+971 2 811 5666",
+    "partnershipStatus": "unconfirmed",
+    "verificationStatus": "verified",
+    "operatingStatus": "open",
+    "active": true,
+    "sources": [
+      { "name": "Conrad Abu Dhabi Etihad Towers Dining", "url": "https://www.hilton.com/en/hotels/auhetci-conrad-abu-dhabi-etihad-towers/dining/rays-bar/", "status": "verified" },
+      { "name": "SevenRooms Official Ray's Bar Portal", "url": "https://www.sevenrooms.com", "status": "verified" }
+    ]
+  },
+  {
+    "id": "lock-stock-barrel-abu-dhabi",
+    "name": "Lock, Stock & Barrel",
+    "city": "Abu Dhabi",
+    "area": "Yas Island",
+    "slug": "lock-stock-barrel-abu-dhabi",
+    "venueType": "Live Music Bar & Nightlife",
+    "address": "Yas Bay Waterfront, Yas Island, Abu Dhabi, United Arab Emirates",
+    "officialWebsite": "https://lsbabudhabi.com",
+    "instagram": "https://www.instagram.com/lockstockuae/",
+    "googleMapsUrl": "https://maps.google.com/?q=Lock+Stock+Barrel+Yas+Bay+Abu+Dhabi",
+    "description": "The capital's undisputed party epicenter on Yas Bay Waterfront, featuring two industrial bars, live band sets, and electric weekend party vibes.",
+    "tagline": "Big vibes, live music, and electric energy on Yas Bay",
+    "images": [
+      {
+        "url": "/images/venues/lock-stock-barrel-abu-dhabi.jpg",
+        "alt": "Lock, Stock & Barrel Yas Bay interior and stage",
+        "source": "Official Yas Bay Waterfront Media"
+      }
+    ],
+    "image": "/images/venues/lock-stock-barrel-abu-dhabi.jpg",
+    "openingNights": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+    "openingHours": "Mon–Wed 4:00 PM – 2:00 AM; Thu–Fri 4:00 PM – 3:00 AM; Sat 2:00 PM – 3:00 AM; Sun 12:00 PM – 2:00 AM",
+    "dressCode": "Smart casual (strictly 21+ with physical ID; no athletic wear or open-toe shoes for men)",
+    "publishedMinimumSpend": null,
+    "confirmedMinimumSpend": null,
+    "capacity": null,
+    "music": "Live Rock & Pop Bands · Party Anthems · Commercial",
+    "reservationContact": "+971 4 423 8308",
+    "partnershipStatus": "unconfirmed",
+    "verificationStatus": "verified",
+    "operatingStatus": "open",
+    "active": true,
+    "sources": [
+      { "name": "Lock, Stock & Barrel Official Website", "url": "https://lsbabudhabi.com", "status": "verified" },
+      { "name": "Yas Bay Waterfront Directory", "url": "https://www.yasbay.ae/dine-in/lock-stock-barrel/", "status": "verified" }
+    ]
+  },
+  {
+    "id": "azura-panoramic-lounge",
+    "name": "Azura Panoramic Lounge",
+    "city": "Abu Dhabi",
+    "area": "Corniche",
+    "slug": "azura-panoramic-lounge",
+    "venueType": "Panoramic Rooftop Lounge",
+    "address": "The St. Regis Abu Dhabi, Nation Towers, Corniche Rd W, Abu Dhabi, UAE",
+    "officialWebsite": "https://www.azuraabudhabi.com",
+    "instagram": "https://www.instagram.com/stregisabudhabi/",
+    "googleMapsUrl": "https://maps.google.com/?q=Azura+Panoramic+Lounge+St+Regis+Abu+Dhabi",
+    "description": "Spanning three levels overlooking the Abu Dhabi Corniche and Arabian Gulf, Azura delivers relaxed open-air lounge beats, Mediterranean shisha, and sunset cocktails.",
+    "tagline": "Three levels of open-air luxury above the Corniche",
+    "images": [
+      {
+        "url": "/images/venues/azura-panoramic-lounge.jpg",
+        "alt": "Azura Panoramic Lounge multi-tier terrace over Abu Dhabi Corniche",
+        "source": "Official Marriott St. Regis Media CDN"
+      }
+    ],
+    "image": "/images/venues/azura-panoramic-lounge.jpg",
+    "openingNights": ["Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+    "openingHours": "Tue–Thu, Sun 6:00 PM – 1:00 AM; Fri–Sat 6:00 PM – 2:00 AM (Closed Mondays)",
+    "dressCode": "Smart casual / Elegant",
+    "publishedMinimumSpend": null,
+    "confirmedMinimumSpend": null,
+    "capacity": null,
+    "music": "Lounge House · Mediterranean Grooves · Chillout",
+    "reservationContact": "+971 2 694 4553",
+    "partnershipStatus": "unconfirmed",
+    "verificationStatus": "verified",
+    "operatingStatus": "open",
+    "active": true,
+    "sources": [
+      { "name": "Azura Panoramic Lounge Official Website", "url": "https://www.azuraabudhabi.com", "status": "verified" },
+      { "name": "The St. Regis Abu Dhabi", "url": "https://www.stregisabudhabi.com", "status": "verified" }
+    ]
+  }
+]
+
