@@ -34,7 +34,11 @@
     "active": true,
     "sources": [
       { "name": "BLING Official Website", "url": "https://blingdxb.com", "status": "verified" },
-      { "name": "FIVE Palm Jumeirah Directory", "url": "https://palmjumeirah.fivehotelsandresorts.com/eat-drink/bling", "status": "verified" }
+      {
+        "name": "FIVE Palm Jumeirah Directory",
+        "url": "https://palmjumeirah.fivehotelsandresorts.com/eat-drink/bling",
+        "status": "verified"
+      }
     ]
   },
   {
@@ -71,8 +75,16 @@
     "operatingStatus": "open",
     "active": true,
     "sources": [
-      { "name": "Bla Bla Dubai Official Website", "url": "https://blabladubai.ae", "status": "verified" },
-      { "name": "Bla Bla Official Instagram", "url": "https://www.instagram.com/blablabymcgettigans/", "status": "verified" }
+      {
+        "name": "Bla Bla Dubai Official Website",
+        "url": "https://blabladubai.ae",
+        "status": "verified"
+      },
+      {
+        "name": "Bla Bla Official Instagram",
+        "url": "https://www.instagram.com/blablabymcgettigans/",
+        "status": "verified"
+      }
     ]
   },
   {
@@ -109,8 +121,16 @@
     "operatingStatus": "open",
     "active": true,
     "sources": [
-      { "name": "Playa Pacha Official Website", "url": "https://www.playapachadubai.com", "status": "verified" },
-      { "name": "FIVE LUXE JBR", "url": "https://luxejbr.fivehotelsandresorts.com", "status": "verified" }
+      {
+        "name": "Playa Pacha Official Website",
+        "url": "https://www.playapachadubai.com",
+        "status": "verified"
+      },
+      {
+        "name": "FIVE LUXE JBR",
+        "url": "https://luxejbr.fivehotelsandresorts.com",
+        "status": "verified"
+      }
     ]
   },
   {
@@ -147,8 +167,16 @@
     "operatingStatus": "open",
     "active": true,
     "sources": [
-      { "name": "ZETA Seventy Seven Official Website", "url": "https://www.zetaseventyseven.com", "status": "verified" },
-      { "name": "Address Hotels & Resorts", "url": "https://www.addresshotels.com", "status": "verified" }
+      {
+        "name": "ZETA Seventy Seven Official Website",
+        "url": "https://www.zetaseventyseven.com",
+        "status": "verified"
+      },
+      {
+        "name": "Address Hotels & Resorts",
+        "url": "https://www.addresshotels.com",
+        "status": "verified"
+      }
     ]
   },
   {
@@ -185,8 +213,16 @@
     "operatingStatus": "open",
     "active": true,
     "sources": [
-      { "name": "The Penthouse Official Website", "url": "https://thepenthouse.co", "status": "verified" },
-      { "name": "FIVE Palm Jumeirah", "url": "https://palmjumeirah.fivehotelsandresorts.com", "status": "verified" }
+      {
+        "name": "The Penthouse Official Website",
+        "url": "https://thepenthouse.co",
+        "status": "verified"
+      },
+      {
+        "name": "FIVE Palm Jumeirah",
+        "url": "https://palmjumeirah.fivehotelsandresorts.com",
+        "status": "verified"
+      }
     ]
   },
   {
@@ -223,8 +259,16 @@
     "operatingStatus": "open",
     "active": true,
     "sources": [
-      { "name": "The Myth Official Website", "url": "https://themythdubai.club", "status": "verified" },
-      { "name": "The Myth Official Instagram", "url": "https://www.instagram.com/themyth.club/", "status": "verified" }
+      {
+        "name": "The Myth Official Website",
+        "url": "https://themythdubai.club",
+        "status": "verified"
+      },
+      {
+        "name": "The Myth Official Instagram",
+        "url": "https://www.instagram.com/themyth.club/",
+        "status": "verified"
+      }
     ]
   },
   {
@@ -262,7 +306,11 @@
     "active": true,
     "sources": [
       { "name": "BLU Dubai Official Website", "url": "https://bludubai.ae", "status": "verified" },
-      { "name": "BLU Dubai Official Instagram", "url": "https://www.instagram.com/bludubai/", "status": "verified" }
+      {
+        "name": "BLU Dubai Official Instagram",
+        "url": "https://www.instagram.com/bludubai/",
+        "status": "verified"
+      }
     ]
   },
   {
@@ -299,8 +347,16 @@
     "operatingStatus": "open",
     "active": true,
     "sources": [
-      { "name": "Bohemia Official Website", "url": "https://bohemiadubai.com", "status": "verified" },
-      { "name": "FIVE Palm Jumeirah", "url": "https://palmjumeirah.fivehotelsandresorts.com", "status": "verified" }
+      {
+        "name": "Bohemia Official Website",
+        "url": "https://bohemiadubai.com",
+        "status": "verified"
+      },
+      {
+        "name": "FIVE Palm Jumeirah",
+        "url": "https://palmjumeirah.fivehotelsandresorts.com",
+        "status": "verified"
+      }
     ]
   },
   {
@@ -337,8 +393,16 @@
     "operatingStatus": "open",
     "active": true,
     "sources": [
-      { "name": "Ling Ling Official Website", "url": "https://linglingdubai.com", "status": "verified" },
-      { "name": "Atlantis The Royal Portal", "url": "https://www.atlantis.com/dubai/restaurants/ling-ling", "status": "verified" }
+      {
+        "name": "Ling Ling Official Website",
+        "url": "https://linglingdubai.com",
+        "status": "verified"
+      },
+      {
+        "name": "Atlantis The Royal Portal",
+        "url": "https://www.atlantis.com/dubai/restaurants/ling-ling",
+        "status": "verified"
+      }
     ]
   },
   {
@@ -375,8 +439,16 @@
     "operatingStatus": "open",
     "active": true,
     "sources": [
-      { "name": "Soho Garden Official Website", "url": "https://sohogardendxb.com", "status": "verified" },
-      { "name": "Soho Garden Instagram", "url": "https://www.instagram.com/sohogardendxb/", "status": "verified" }
+      {
+        "name": "Soho Garden Official Website",
+        "url": "https://sohogardendxb.com",
+        "status": "verified"
+      },
+      {
+        "name": "Soho Garden Instagram",
+        "url": "https://www.instagram.com/sohogardendxb/",
+        "status": "verified"
+      }
     ]
   },
   {
@@ -413,7 +485,11 @@
     "operatingStatus": "temporarily_closed",
     "active": false,
     "sources": [
-      { "name": "Armani Hotel Dubai Official Portal", "url": "https://www.armanihoteldubai.com", "status": "verified" },
+      {
+        "name": "Armani Hotel Dubai Official Portal",
+        "url": "https://www.armanihoteldubai.com",
+        "status": "verified"
+      },
       { "name": "Downtown Dubai Tourism", "url": "https://www.dwntwna.com", "status": "verified" }
     ]
   },
@@ -451,8 +527,16 @@
     "operatingStatus": "open",
     "active": true,
     "sources": [
-      { "name": "Yas Bay Waterfront Destination Directory", "url": "https://www.yasbay.ae/dine-in/white-abu-dhabi/", "status": "verified" },
-      { "name": "Visit Abu Dhabi Official Tourism Portal", "url": "https://visitabudhabi.ae", "status": "verified" }
+      {
+        "name": "Yas Bay Waterfront Destination Directory",
+        "url": "https://www.yasbay.ae/dine-in/white-abu-dhabi/",
+        "status": "verified"
+      },
+      {
+        "name": "Visit Abu Dhabi Official Tourism Portal",
+        "url": "https://visitabudhabi.ae",
+        "status": "verified"
+      }
     ]
   },
   {
@@ -489,8 +573,16 @@
     "operatingStatus": "open",
     "active": true,
     "sources": [
-      { "name": "Siddharta Lounge Official Website", "url": "https://www.siddhartalounge-abudhabi.com", "status": "verified" },
-      { "name": "Yas Bay Waterfront Portal", "url": "https://www.yasbay.ae/dine-in/siddhartha-lounge/", "status": "verified" }
+      {
+        "name": "Siddharta Lounge Official Website",
+        "url": "https://www.siddhartalounge-abudhabi.com",
+        "status": "verified"
+      },
+      {
+        "name": "Yas Bay Waterfront Portal",
+        "url": "https://www.yasbay.ae/dine-in/siddhartha-lounge/",
+        "status": "verified"
+      }
     ]
   },
   {
@@ -527,8 +619,16 @@
     "operatingStatus": "open",
     "active": true,
     "sources": [
-      { "name": "Buddha-Bar Beach Official Website", "url": "https://www.buddhabarbeachabudhabi.com", "status": "verified" },
-      { "name": "The St. Regis Saadiyat Island Resort", "url": "https://www.marriott.com", "status": "verified" }
+      {
+        "name": "Buddha-Bar Beach Official Website",
+        "url": "https://www.buddhabarbeachabudhabi.com",
+        "status": "verified"
+      },
+      {
+        "name": "The St. Regis Saadiyat Island Resort",
+        "url": "https://www.marriott.com",
+        "status": "verified"
+      }
     ]
   },
   {
@@ -565,8 +665,16 @@
     "operatingStatus": "open",
     "active": true,
     "sources": [
-      { "name": "Hudayriyat Island Official Directory", "url": "https://www.hudayriyatisland.ae/en/venues/ilios-beach-club", "status": "verified" },
-      { "name": "Surf Abu Dhabi Ilios", "url": "https://www.surfabudhabi.com/ilios", "status": "verified" }
+      {
+        "name": "Hudayriyat Island Official Directory",
+        "url": "https://www.hudayriyatisland.ae/en/venues/ilios-beach-club",
+        "status": "verified"
+      },
+      {
+        "name": "Surf Abu Dhabi Ilios",
+        "url": "https://www.surfabudhabi.com/ilios",
+        "status": "verified"
+      }
     ]
   },
   {
@@ -603,8 +711,16 @@
     "operatingStatus": "open",
     "active": true,
     "sources": [
-      { "name": "Café del Mar Abu Dhabi Official Portal", "url": "https://cafedelmarabudhabi.com", "status": "verified" },
-      { "name": "Time Out Abu Dhabi Re-opening Feature", "url": "https://www.timeoutabudhabi.com", "status": "verified" }
+      {
+        "name": "Café del Mar Abu Dhabi Official Portal",
+        "url": "https://cafedelmarabudhabi.com",
+        "status": "verified"
+      },
+      {
+        "name": "Time Out Abu Dhabi Re-opening Feature",
+        "url": "https://www.timeoutabudhabi.com",
+        "status": "verified"
+      }
     ]
   },
   {
@@ -641,8 +757,16 @@
     "operatingStatus": "open",
     "active": true,
     "sources": [
-      { "name": "Iris Abu Dhabi Official Website", "url": "https://www.irisabudhabi.com", "status": "verified" },
-      { "name": "Yas Marina Destination Guide", "url": "https://www.yasmarina.ae", "status": "verified" }
+      {
+        "name": "Iris Abu Dhabi Official Website",
+        "url": "https://www.irisabudhabi.com",
+        "status": "verified"
+      },
+      {
+        "name": "Yas Marina Destination Guide",
+        "url": "https://www.yasmarina.ae",
+        "status": "verified"
+      }
     ]
   },
   {
@@ -679,8 +803,16 @@
     "operatingStatus": "open",
     "active": true,
     "sources": [
-      { "name": "Saadiyat Beach Club Official Website", "url": "https://www.saadiyatbeachclub.ae", "status": "verified" },
-      { "name": "Saadiyat Island Destination", "url": "https://saadiyatisland.ae", "status": "verified" }
+      {
+        "name": "Saadiyat Beach Club Official Website",
+        "url": "https://www.saadiyatbeachclub.ae",
+        "status": "verified"
+      },
+      {
+        "name": "Saadiyat Island Destination",
+        "url": "https://saadiyatisland.ae",
+        "status": "verified"
+      }
     ]
   },
   {
@@ -717,8 +849,16 @@
     "operatingStatus": "open",
     "active": true,
     "sources": [
-      { "name": "Conrad Abu Dhabi Etihad Towers Dining", "url": "https://www.hilton.com/en/hotels/auhetci-conrad-abu-dhabi-etihad-towers/dining/rays-bar/", "status": "verified" },
-      { "name": "SevenRooms Official Ray's Bar Portal", "url": "https://www.sevenrooms.com", "status": "verified" }
+      {
+        "name": "Conrad Abu Dhabi Etihad Towers Dining",
+        "url": "https://www.hilton.com/en/hotels/auhetci-conrad-abu-dhabi-etihad-towers/dining/rays-bar/",
+        "status": "verified"
+      },
+      {
+        "name": "SevenRooms Official Ray's Bar Portal",
+        "url": "https://www.sevenrooms.com",
+        "status": "verified"
+      }
     ]
   },
   {
@@ -755,8 +895,16 @@
     "operatingStatus": "open",
     "active": true,
     "sources": [
-      { "name": "Lock, Stock & Barrel Official Website", "url": "https://lsbabudhabi.com", "status": "verified" },
-      { "name": "Yas Bay Waterfront Directory", "url": "https://www.yasbay.ae/dine-in/lock-stock-barrel/", "status": "verified" }
+      {
+        "name": "Lock, Stock & Barrel Official Website",
+        "url": "https://lsbabudhabi.com",
+        "status": "verified"
+      },
+      {
+        "name": "Yas Bay Waterfront Directory",
+        "url": "https://www.yasbay.ae/dine-in/lock-stock-barrel/",
+        "status": "verified"
+      }
     ]
   },
   {
@@ -793,9 +941,16 @@
     "operatingStatus": "open",
     "active": true,
     "sources": [
-      { "name": "Azura Panoramic Lounge Official Website", "url": "https://www.azuraabudhabi.com", "status": "verified" },
-      { "name": "The St. Regis Abu Dhabi", "url": "https://www.stregisabudhabi.com", "status": "verified" }
+      {
+        "name": "Azura Panoramic Lounge Official Website",
+        "url": "https://www.azuraabudhabi.com",
+        "status": "verified"
+      },
+      {
+        "name": "The St. Regis Abu Dhabi",
+        "url": "https://www.stregisabudhabi.com",
+        "status": "verified"
+      }
     ]
   }
 ]
-

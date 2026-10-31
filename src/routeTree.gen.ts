@@ -12,11 +12,14 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AbuDhabiRouteImport } from './routes/abu-dhabi'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as CookiesRouteImport } from './routes/cookies'
 import { Route as DubaiRouteImport } from './routes/dubai'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as GuestlistRouteImport } from './routes/guestlist'
 import { Route as HowItWorksRouteImport } from './routes/how-it-works'
 import { Route as PartnerRouteImport } from './routes/partner'
+import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as TermsRouteImport } from './routes/terms'
 import { Route as VenuesIndexRouteImport } from './routes/venues.index'
 import { Route as VenuesSlugRouteImport } from './routes/venues.$slug'
 
@@ -33,6 +36,11 @@ const AbuDhabiRoute = AbuDhabiRouteImport.update({
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CookiesRoute = CookiesRouteImport.update({
+  id: '/cookies',
+  path: '/cookies',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DubaiRoute = DubaiRouteImport.update({
@@ -60,6 +68,16 @@ const PartnerRoute = PartnerRouteImport.update({
   path: '/partner',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const VenuesIndexRoute = VenuesIndexRouteImport.update({
   id: '/venues/',
   path: '/venues/',
@@ -75,11 +93,14 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/abu-dhabi': typeof AbuDhabiRoute
   '/contact': typeof ContactRoute
+  '/cookies': typeof CookiesRoute
   '/dubai': typeof DubaiRoute
   '/faq': typeof FaqRoute
   '/guestlist': typeof GuestlistRoute
   '/how-it-works': typeof HowItWorksRoute
   '/partner': typeof PartnerRoute
+  '/privacy': typeof PrivacyRoute
+  '/terms': typeof TermsRoute
   '/venues/$slug': typeof VenuesSlugRoute
   '/venues/': typeof VenuesIndexRoute
 }
@@ -87,11 +108,14 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/abu-dhabi': typeof AbuDhabiRoute
   '/contact': typeof ContactRoute
+  '/cookies': typeof CookiesRoute
   '/dubai': typeof DubaiRoute
   '/faq': typeof FaqRoute
   '/guestlist': typeof GuestlistRoute
   '/how-it-works': typeof HowItWorksRoute
   '/partner': typeof PartnerRoute
+  '/privacy': typeof PrivacyRoute
+  '/terms': typeof TermsRoute
   '/venues/$slug': typeof VenuesSlugRoute
   '/venues': typeof VenuesIndexRoute
 }
@@ -100,11 +124,14 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/abu-dhabi': typeof AbuDhabiRoute
   '/contact': typeof ContactRoute
+  '/cookies': typeof CookiesRoute
   '/dubai': typeof DubaiRoute
   '/faq': typeof FaqRoute
   '/guestlist': typeof GuestlistRoute
   '/how-it-works': typeof HowItWorksRoute
   '/partner': typeof PartnerRoute
+  '/privacy': typeof PrivacyRoute
+  '/terms': typeof TermsRoute
   '/venues/$slug': typeof VenuesSlugRoute
   '/venues/': typeof VenuesIndexRoute
 }
@@ -114,11 +141,14 @@ export interface FileRouteTypes {
     | '/'
     | '/abu-dhabi'
     | '/contact'
+    | '/cookies'
     | '/dubai'
     | '/faq'
     | '/guestlist'
     | '/how-it-works'
     | '/partner'
+    | '/privacy'
+    | '/terms'
     | '/venues/$slug'
     | '/venues/'
   fileRoutesByTo: FileRoutesByTo
@@ -126,11 +156,14 @@ export interface FileRouteTypes {
     | '/'
     | '/abu-dhabi'
     | '/contact'
+    | '/cookies'
     | '/dubai'
     | '/faq'
     | '/guestlist'
     | '/how-it-works'
     | '/partner'
+    | '/privacy'
+    | '/terms'
     | '/venues/$slug'
     | '/venues'
   id:
@@ -138,11 +171,14 @@ export interface FileRouteTypes {
     | '/'
     | '/abu-dhabi'
     | '/contact'
+    | '/cookies'
     | '/dubai'
     | '/faq'
     | '/guestlist'
     | '/how-it-works'
     | '/partner'
+    | '/privacy'
+    | '/terms'
     | '/venues/$slug'
     | '/venues/'
   fileRoutesById: FileRoutesById
@@ -151,11 +187,14 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AbuDhabiRoute: typeof AbuDhabiRoute
   ContactRoute: typeof ContactRoute
+  CookiesRoute: typeof CookiesRoute
   DubaiRoute: typeof DubaiRoute
   FaqRoute: typeof FaqRoute
   GuestlistRoute: typeof GuestlistRoute
   HowItWorksRoute: typeof HowItWorksRoute
   PartnerRoute: typeof PartnerRoute
+  PrivacyRoute: typeof PrivacyRoute
+  TermsRoute: typeof TermsRoute
   VenuesSlugRoute: typeof VenuesSlugRoute
   VenuesIndexRoute: typeof VenuesIndexRoute
 }
@@ -181,6 +220,13 @@ declare module '@tanstack/react-router' {
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cookies': {
+      id: '/cookies'
+      path: '/cookies'
+      fullPath: '/cookies'
+      preLoaderRoute: typeof CookiesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/dubai': {
@@ -218,6 +264,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PartnerRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/venues/': {
       id: '/venues/'
       path: '/venues'
@@ -239,11 +299,14 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AbuDhabiRoute: AbuDhabiRoute,
   ContactRoute: ContactRoute,
+  CookiesRoute: CookiesRoute,
   DubaiRoute: DubaiRoute,
   FaqRoute: FaqRoute,
   GuestlistRoute: GuestlistRoute,
   HowItWorksRoute: HowItWorksRoute,
   PartnerRoute: PartnerRoute,
+  PrivacyRoute: PrivacyRoute,
+  TermsRoute: TermsRoute,
   VenuesSlugRoute: VenuesSlugRoute,
   VenuesIndexRoute: VenuesIndexRoute,
 }

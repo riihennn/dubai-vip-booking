@@ -75,4 +75,3 @@ describe("Venues Database & Integration", () => {
     expect(white?.city).toBe("abu-dhabi");
   });
 });
-

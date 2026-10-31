@@ -4,6 +4,8 @@ import { ArrowUpRight, Menu, MessageCircle, X } from "lucide-react";
 import { useEffect, useState, type ReactNode } from "react";
 import { cn } from "@/lib/utils";
 import { waLink, type Venue } from "@/lib/venues";
+import { buildQuickWhatsAppLink } from "@/lib/tracking";
+import { createSeoMeta } from "@/lib/seo";
 import { ThemeToggle } from "./theme-toggle";
 
 const mainNav = [
@@ -26,7 +28,12 @@ export function Logo() {
       <span className="relative grid size-7 place-items-center rounded-full border border-primary">
         <span className="size-2 rounded-full bg-primary transition-transform duration-500 group-hover:scale-150" />
       </span>
-      <span className="font-display text-lg font-extrabold tracking-tight">DUBAI VIP<span className="ml-1 font-sans text-[10px] font-semibold tracking-[0.3em] text-primary">BOOKING</span></span>
+      <span className="font-display text-lg font-extrabold tracking-tight">
+        DUBAI VIP
+        <span className="ml-1 font-sans text-[10px] font-semibold tracking-[0.3em] text-primary">
+          BOOKING
+        </span>
+      </span>
     </Link>
   );
 }
@@ -36,12 +43,29 @@ export function WhatsAppButton({
   children = "Book on WhatsApp",
   className,
   size = "md",
-}: { message?: string | undefined; children?: ReactNode; className?: string; size?: "sm" | "md" | "lg" }) {
+}: {
+  message?: string | undefined;
+  children?: ReactNode;
+  className?: string;
+  size?: "sm" | "md" | "lg";
+}) {
+  const defaultMsg = message ?? "Hi Dubai VIP Booking, I'd like to book a night out.";
+
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    // Dynamically generate fresh reference code and attach active UTM parameters on user click
+    if (typeof window !== "undefined") {
+      e.preventDefault();
+      const dynamicUrl = buildQuickWhatsAppLink(defaultMsg);
+      window.open(dynamicUrl, "_blank", "noopener,noreferrer");
+    }
+  };
+
   return (
     <a
-      href={waLink(message ?? "Hi Dubai VIP Booking, I'd like to book a night out.")}
+      href={waLink(defaultMsg)}
+      onClick={handleClick}
       target="_blank"
-      rel="noreferrer"
+      rel="noopener noreferrer"
       className={cn(
         "group inline-flex items-center justify-center gap-2 rounded-full bg-whatsapp font-semibold text-whatsapp-foreground transition-all duration-300 hover:-translate-y-0.5 hover:shadow-glow",
         size === "sm" && "px-4 py-2 text-sm",
@@ -56,13 +80,21 @@ export function WhatsAppButton({
   );
 }
 
-export function GhostLink({ to, children, className }: { to: string; children: ReactNode; className?: string }) {
+export function GhostLink({
+  to,
+  children,
+  className,
+}: {
+  to: string;
+  children: ReactNode;
+  className?: string;
+}) {
   return (
     <Link
       to={to}
       className={cn(
         "group inline-flex items-center gap-2 rounded-full border border-foreground/25 px-6 py-3 text-sm font-semibold transition-colors hover:border-primary hover:text-primary",
-        className
+        className,
       )}
     >
       {children}
@@ -102,7 +134,7 @@ export function Header() {
                 "text-sm font-medium transition-colors",
                 scrolled
                   ? "text-foreground/75 hover:text-foreground"
-                  : "text-white/85 hover:text-white"
+                  : "text-white/85 hover:text-white",
               )}
               activeProps={{ className: "text-primary font-semibold" }}
             >
@@ -124,7 +156,7 @@ export function Header() {
                 "grid size-9 place-items-center rounded-full border transition-colors",
                 scrolled
                   ? "border-border bg-card/60 text-foreground"
-                  : "border-white/30 bg-black/40 text-white"
+                  : "border-white/30 bg-black/40 text-white",
               )}
             >
               {open ? <X className="size-5" /> : <Menu className="size-5" />}
@@ -142,8 +174,17 @@ export function Header() {
           >
             <div className="space-y-1">
               {mainNav.map((n, i) => (
-                <motion.div key={n.to} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.04 }}>
-                  <Link to={n.to} className="block py-3 font-display text-4xl font-bold" activeProps={{ className: "text-primary" }}>
+                <motion.div
+                  key={n.to}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: i * 0.04 }}
+                >
+                  <Link
+                    to={n.to}
+                    className="block py-3 font-display text-4xl font-bold"
+                    activeProps={{ className: "text-primary" }}
+                  >
                     {n.label}
                   </Link>
                 </motion.div>
@@ -153,7 +194,12 @@ export function Header() {
               <p className="eyebrow mb-3 text-muted-foreground">Information</p>
               <div className="grid grid-cols-2 gap-3">
                 {footerNav.map((n) => (
-                  <Link key={n.to} to={n.to} className="py-2 text-base text-foreground/75 hover:text-primary" activeProps={{ className: "text-primary font-semibold" }}>
+                  <Link
+                    key={n.to}
+                    to={n.to}
+                    className="py-2 text-base text-foreground/75 hover:text-primary"
+                    activeProps={{ className: "text-primary font-semibold" }}
+                  >
                     {n.label}
                   </Link>
                 ))}
@@ -184,19 +230,49 @@ export function Footer() {
         <div className="mt-16 grid gap-10 border-t border-border pt-10 text-sm md:grid-cols-4">
           <div>
             <Logo />
-            <p className="mt-4 text-muted-foreground">Your Night. Your City. Premium nightlife across Dubai & Abu Dhabi.</p>
+            <p className="mt-4 text-muted-foreground">
+              Your Night. Your City. Premium nightlife experiences across Dubai & Abu Dhabi.
+            </p>
           </div>
           {[
-            ["Cities", [["/dubai", "Dubai"], ["/abu-dhabi", "Abu Dhabi"], ["/venues", "All venues"]]],
-            ["Book", [["/guestlist", "Guestlist"], ["/how-it-works", "How it works"], ["/faq", "FAQ"]]],
-            ["Company", [["/partner", "Partner with us"], ["/contact", "Contact"]]],
+            [
+              "Cities",
+              [
+                ["/dubai", "Dubai"],
+                ["/abu-dhabi", "Abu Dhabi"],
+                ["/venues", "All venues"],
+              ],
+            ],
+            [
+              "Book",
+              [
+                ["/guestlist", "Guestlist"],
+                ["/how-it-works", "How it works"],
+                ["/faq", "FAQ"],
+              ],
+            ],
+            [
+              "Company & Legal",
+              [
+                ["/partner", "Partner with us"],
+                ["/contact", "Contact"],
+                ["/terms", "Terms & Conditions"],
+                ["/privacy", "Privacy Policy"],
+                ["/cookies", "Cookie Policy"],
+              ],
+            ],
           ].map(([title, links]) => (
             <div key={title as string}>
               <p className="eyebrow mb-4">{title as string}</p>
               <ul className="space-y-2">
                 {(links as [string, string][]).map(([to, l]) => (
                   <li key={to}>
-                    <Link to={to} className="text-foreground/70 hover:text-primary">{l}</Link>
+                    <Link
+                      to={to}
+                      className="text-foreground/70 hover:text-primary transition-colors"
+                    >
+                      {l}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -205,7 +281,11 @@ export function Footer() {
         </div>
         <div className="mt-12 border-t border-border pt-8 space-y-2 text-xs text-muted-foreground leading-relaxed">
           <p>© 2026 Dubai VIP Booking. All rights reserved.</p>
-          <p>Dubai VIP Booking is operated by WaltX Limited, licensed by Masdar City Free Zone, Abu Dhabi, UAE (Licence No. MC 14979).</p>
+          <p>
+            Dubai VIP Booking is operated by WaltX Limited, licensed by Masdar City Free Zone, Abu
+            Dhabi, UAE (Licence No. MC 14979).
+          </p>
+          <p>Dubai VIP Booking promotes nightlife experiences and is not the venue operator.</p>
         </div>
       </div>
     </footer>
@@ -213,11 +293,22 @@ export function Footer() {
 }
 
 export function FloatingWhatsApp() {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (typeof window !== "undefined") {
+      e.preventDefault();
+      const url = buildQuickWhatsAppLink(
+        "Hi Dubai VIP Booking, I'd like to enquire about table bookings.",
+      );
+      window.open(url, "_blank", "noopener,noreferrer");
+    }
+  };
+
   return (
     <a
-      href={waLink("Hi Dubai VIP Booking, I'd like to book a night out.")}
+      href={waLink("Hi Dubai VIP Booking, I'd like to enquire about table bookings.")}
+      onClick={handleClick}
       target="_blank"
-      rel="noreferrer"
+      rel="noopener noreferrer"
       aria-label="Chat on WhatsApp"
       className="fixed bottom-5 right-5 z-40 grid size-14 place-items-center rounded-full bg-whatsapp text-whatsapp-foreground shadow-glow transition-transform hover:scale-110"
     >
@@ -232,7 +323,15 @@ const fadeUp: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.9, ease: [0.22, 1, 0.36, 1] } },
 };
 
-export function Reveal({ children, className, delay = 0 }: { children: ReactNode; className?: string; delay?: number }) {
+export function Reveal({
+  children,
+  className,
+  delay = 0,
+}: {
+  children: ReactNode;
+  className?: string;
+  delay?: number;
+}) {
   return (
     <motion.div
       className={className}
@@ -247,13 +346,32 @@ export function Reveal({ children, className, delay = 0 }: { children: ReactNode
   );
 }
 
-export function PageHero({ eyebrow, title, sub, image }: { eyebrow: string; title: ReactNode; sub?: string; image?: string }) {
+export function PageHero({
+  eyebrow,
+  title,
+  sub,
+  image,
+}: {
+  eyebrow: string;
+  title: ReactNode;
+  sub?: string;
+  image?: string;
+}) {
   return (
-    <section className={cn("grain relative flex min-h-[70vh] items-end overflow-hidden pb-16 pt-32", image && "text-white")}>
+    <section
+      className={cn(
+        "grain relative flex min-h-[70vh] items-end overflow-hidden pb-16 pt-32",
+        image && "text-white",
+      )}
+    >
       {image && (
         <motion.img
           src={image}
           alt=""
+          width={1920}
+          height={1080}
+          loading="eager"
+          fetchPriority="high"
           initial={{ scale: 1.15, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1.8, ease: [0.22, 1, 0.36, 1] }}
@@ -262,7 +380,12 @@ export function PageHero({ eyebrow, title, sub, image }: { eyebrow: string; titl
       )}
       {image && <div className="absolute inset-0 bg-fade" />}
       <div className="relative mx-auto w-full max-w-7xl px-5 md:px-8">
-        <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }} className="eyebrow text-primary">
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3 }}
+          className="eyebrow text-primary"
+        >
           {eyebrow}
         </motion.p>
         <motion.h1
@@ -274,7 +397,12 @@ export function PageHero({ eyebrow, title, sub, image }: { eyebrow: string; titl
           {title}
         </motion.h1>
         {sub && (
-          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }} className={cn("mt-6 max-w-xl text-lg", image ? "text-white/80" : "text-foreground/75")}>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.6 }}
+            className={cn("mt-6 max-w-xl text-lg", image ? "text-white/80" : "text-foreground/75")}
+          >
             {sub}
           </motion.p>
         )}
@@ -283,7 +411,15 @@ export function PageHero({ eyebrow, title, sub, image }: { eyebrow: string; titl
   );
 }
 
-export function VenueCard({ venue, index = 0, tall = false }: { venue: Venue; index?: number; tall?: boolean }) {
+export function VenueCard({
+  venue,
+  index = 0,
+  tall = false,
+}: {
+  venue: Venue;
+  index?: number;
+  tall?: boolean;
+}) {
   return (
     <Reveal delay={(index % 3) * 0.08}>
       <Link
@@ -291,12 +427,14 @@ export function VenueCard({ venue, index = 0, tall = false }: { venue: Venue; in
         params={{ slug: venue.slug }}
         className={cn(
           "group relative block overflow-hidden rounded-sm bg-card border border-border transition-all duration-300 hover:shadow-xl [html.light_&]:shadow-sm",
-          tall ? "aspect-[3/4.4]" : "aspect-[4/5]"
+          tall ? "aspect-[3/4.4]" : "aspect-[4/5]",
         )}
       >
         <img
           src={venue.image}
-          alt={venue.name}
+          alt={venue.images[0]?.alt || `${venue.name} VIP table venue in ${venue.area}`}
+          width={800}
+          height={1000}
           loading="lazy"
           className="absolute inset-0 size-full object-cover transition-all duration-[1.2s] ease-out group-hover:scale-110 group-hover:brightness-110"
         />
@@ -316,8 +454,13 @@ export function VenueCard({ venue, index = 0, tall = false }: { venue: Venue; in
           <div className="grid grid-rows-[0fr] transition-all duration-500 group-hover:grid-rows-[1fr]">
             <div className="overflow-hidden">
               <div className="mt-4 flex items-center justify-between border-t border-white/20 pt-4 text-xs text-white/80">
-                <span>{venue.nights.join(" · ")}{venue.capacity ? ` · ${venue.capacity}` : ""}</span>
-                <span className="text-primary font-semibold">{venue.minSpend.startsWith("AED") ? `From ${venue.minSpend}` : venue.minSpend}</span>
+                <span>
+                  {venue.nights.join(" · ")}
+                  {venue.capacity ? ` · ${venue.capacity}` : ""}
+                </span>
+                <span className="text-primary font-semibold">
+                  {venue.minSpend.startsWith("AED") ? `From ${venue.minSpend}` : venue.minSpend}
+                </span>
               </div>
             </div>
           </div>
@@ -335,7 +478,10 @@ export function Marquee({ items }: { items: string[] }) {
     <div className="overflow-hidden border-y border-border bg-ink py-5">
       <div className="marquee flex w-max gap-12 whitespace-nowrap">
         {row.map((t, i) => (
-          <span key={i} className="flex items-center gap-12 font-display text-2xl font-bold uppercase text-foreground/80 md:text-4xl">
+          <span
+            key={i}
+            className="flex items-center gap-12 font-display text-2xl font-bold uppercase text-foreground/80 md:text-4xl"
+          >
             {t}
             <span className="size-2 rounded-full bg-primary" />
           </span>
@@ -346,7 +492,11 @@ export function Marquee({ items }: { items: string[] }) {
 }
 
 export function Section({ children, className }: { children: ReactNode; className?: string }) {
-  return <section className={cn("mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-32", className)}>{children}</section>;
+  return (
+    <section className={cn("mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-32", className)}>
+      {children}
+    </section>
+  );
 }
 
 export function CtaBand({ title, message }: { title: ReactNode; message?: string }) {
@@ -365,13 +515,5 @@ export function CtaBand({ title, message }: { title: ReactNode; message?: string
   );
 }
 
-export const meta = (title: string, description: string) => ({
-  meta: [
-    { title },
-    { name: "description", content: description },
-    { property: "og:title", content: title },
-    { property: "og:description", content: description },
-    { property: "og:type", content: "website" },
-    { name: "twitter:card", content: "summary_large_image" },
-  ],
-});
+export const meta = (title: string, description: string, path = "/") =>
+  createSeoMeta({ title, description, path });

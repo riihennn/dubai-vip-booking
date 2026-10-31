@@ -18,7 +18,9 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     try {
       const stored = localStorage.getItem(THEME_STORAGE_KEY);
       if (stored === "light" || stored === "dark") return stored;
-    } catch {}
+    } catch (_err) {
+      // Ignore storage access errors in restricted modes
+    }
     return "dark"; // Default: preserve exact dark mode
   });
 
@@ -44,7 +46,9 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     applyTheme(theme);
     try {
       localStorage.setItem(THEME_STORAGE_KEY, theme);
-    } catch {}
+    } catch (_err) {
+      // Ignore storage access errors in restricted modes
+    }
   }, [theme]);
 
   const setTheme = (t: Theme) => {

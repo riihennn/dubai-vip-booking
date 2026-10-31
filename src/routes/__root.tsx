@@ -12,6 +12,16 @@ import { useEffect, type ReactNode } from "react";
 import { useRouterState } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { FloatingWhatsApp, Footer, Header } from "@/components/site";
+import { CookieBanner } from "@/components/cookie-banner";
+import { Analytics } from "@/components/analytics";
+import { JsonLd } from "@/components/json-ld";
+import { captureUtmParameters } from "@/lib/tracking";
+import {
+  buildOrganizationSchema,
+  buildWebsiteSchema,
+  CANONICAL_DOMAIN,
+  DEFAULT_OG_IMAGE,
+} from "@/lib/seo";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
@@ -82,20 +92,31 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Dubai VIP Booking — Dubai VIP Nightlife" },
-      { name: "description", content: "Private nightlife concierge for Dubai and Abu Dhabi." },
+      { title: "Dubai VIP Booking — Dubai & Abu Dhabi VIP Nightlife Concierge" },
+      {
+        name: "description",
+        content:
+          "Private nightlife concierge for Dubai and Abu Dhabi. VIP tables, beach clubs, and guestlist reservations booked directly on WhatsApp.",
+      },
+      { property: "og:site_name", content: "Dubai VIP Booking" },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: DEFAULT_OG_IMAGE },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: DEFAULT_OG_IMAGE },
       { name: "theme-color", content: "#141210" },
     ],
     links: [
+      { rel: "canonical", href: `${CANONICAL_DOMAIN}/` },
       { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
       { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon.png" },
       { rel: "shortcut icon", href: "/favicon.ico" },
       { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap",
+      },
       { rel: "stylesheet", href: appCss },
     ],
   }),
@@ -143,17 +164,32 @@ function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   const path = useRouterState({ select: (s) => s.location.pathname });
 
+  useEffect(() => {
+    // Capture any incoming UTM parameters on initial site arrival
+    captureUtmParameters();
+  }, []);
+
   return (
     <ThemeProvider>
       <QueryClientProvider client={queryClient}>
+        <JsonLd schema={buildOrganizationSchema()} />
+        <JsonLd schema={buildWebsiteSchema()} />
+
         <Header />
 
-        <motion.main key={path} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
+        <motion.main
+          key={path}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
           <Outlet />
         </motion.main>
 
         <Footer />
         <FloatingWhatsApp />
+        <CookieBanner />
+        <Analytics />
       </QueryClientProvider>
     </ThemeProvider>
   );

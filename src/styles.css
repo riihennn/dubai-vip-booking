@@ -58,8 +58,18 @@
   --ring: oklch(0.82 0.12 80);
   --whatsapp: oklch(0.72 0.17 150);
   --whatsapp-foreground: oklch(0.12 0.02 150);
-  --gradient-gold: linear-gradient(120deg, oklch(0.88 0.1 85), oklch(0.74 0.13 70), oklch(0.66 0.19 42));
-  --gradient-fade: linear-gradient(to top, var(--background) 0%, oklch(0.12 0.006 60 / 70%) 40%, transparent 100%);
+  --gradient-gold: linear-gradient(
+    120deg,
+    oklch(0.88 0.1 85),
+    oklch(0.74 0.13 70),
+    oklch(0.66 0.19 42)
+  );
+  --gradient-fade: linear-gradient(
+    to top,
+    var(--background) 0%,
+    oklch(0.12 0.006 60 / 70%) 40%,
+    transparent 100%
+  );
   --shadow-glow: 0 20px 60px -20px oklch(0.82 0.12 80 / 45%);
 }
 
@@ -91,22 +101,42 @@ html.light,
   --whatsapp: #0a0a0a;
   --whatsapp-foreground: #ffffff;
   --gradient-gold: linear-gradient(120deg, #487c04 0%, #72c10c 50%, #3e6d03 100%);
-  --gradient-fade: linear-gradient(to top, rgba(10, 10, 12, 0.9) 0%, rgba(10, 10, 12, 0.45) 45%, transparent 100%);
+  --gradient-fade: linear-gradient(
+    to top,
+    rgba(10, 10, 12, 0.9) 0%,
+    rgba(10, 10, 12, 0.45) 45%,
+    transparent 100%
+  );
   --shadow-glow: 0 14px 40px -10px rgba(177, 239, 66, 0.45);
 }
 
 @layer base {
-  * { border-color: var(--color-border); }
-  html { scroll-behavior: smooth; }
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
-    transition: background-color 0.25s ease, color 0.25s ease;
+    transition:
+      background-color 0.25s ease,
+      color 0.25s ease;
   }
-  h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.03em; }
-  ::selection { background: var(--primary); color: var(--primary-foreground); }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.03em;
+  }
+  ::selection {
+    background: var(--primary);
+    color: var(--primary-foreground);
+  }
 }
 
 @utility text-gold {
@@ -115,9 +145,15 @@ html.light,
   background-clip: text;
   color: transparent;
 }
-@utility bg-gold { background: var(--gradient-gold); }
-@utility bg-fade { background: var(--gradient-fade); }
-@utility shadow-glow { box-shadow: var(--shadow-glow); }
+@utility bg-gold {
+  background: var(--gradient-gold);
+}
+@utility bg-fade {
+  background: var(--gradient-fade);
+}
+@utility shadow-glow {
+  box-shadow: var(--shadow-glow);
+}
 @utility eyebrow {
   font-size: 0.7rem;
   letter-spacing: 0.35em;
@@ -153,7 +189,14 @@ html.light,
 @utility marquee {
   animation: marquee 40s linear infinite;
 }
-@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
 
 /* Light mode specific enhancements matching thenightcircle */
 html.light .grain::after {
@@ -175,4 +218,26 @@ html.light .border-primary {
 
 html.light .eyebrow {
   color: #60646c;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
